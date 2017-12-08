@@ -1,0 +1,47 @@
+.home {
+
+  @media @min {
+    padding-top: 50px;
+  }
+  @media @tablet {
+    padding-top: 100px;
+  }
+
+  & &-item {
+
+    border-radius: 3px;
+
+    @media @min {
+      padding: 40px 0;
+    }
+    @media @tablet {
+      padding: 80px 0;
+    }
+    
+    background-color: @bgGray;
+    margin-bottom: @spaced;
+    transition: 300ms ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      background-color: @white;
+      box-shadow: 0 10px @spaced rgba(0,0,0,.05);
+    }
+
+    &__icon {
+    }
+    &__title {
+      color: @purple;
+      font-weight: bold;
+      .font_size(32);
+      line-height: 1;
+      margin: @spaced*.75 0;
+    }
+    &__desc {
+      .font_size(19);
+      color: @gray;
+    }
+
+  }
+
+}

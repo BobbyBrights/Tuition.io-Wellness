@@ -1,0 +1,129 @@
+// Transitions
+
+*:link,
+*:visited,
+*:hover,
+*:active,
+*:focus {
+  transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
+}
+
+*:focus,
+*:hover,
+*:active { outline: none; }
+
+
+// Elements
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body * {
+  word-wrap: break-word;
+  color: @textGray;
+  line-height: 1.6;
+}
+
+::selection,
+::-moz-selection {
+  background: #eee;
+  text-shadow: none;
+}
+
+// Text
+
+hr {
+  width: 100%;
+  height: 1px;
+  background: @white;
+  border: none;
+  clear: both;
+  margin: @spaced 0;
+  &.thin {
+    background: @lighterGray;
+  }
+  &.compact {
+    margin: @spaced/2 0;
+  }
+  &.big {
+    margin: @spaced*2 0;
+  }
+}
+
+// Forms
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+form {
+
+  & label {
+    .font_size(14);
+    display: block;
+    margin: 0 0 5px;
+    color: @gray;
+  }
+
+  & select {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    box-shadow: 0 0 0 1px @lightGray;
+    border: 0;
+    background: url('/wp-content/themes/tuition.io/assets/img/chevron-down.svg') center right 10px no-repeat;
+    background-size: 20px auto;
+    -webkit-appearance: none;
+  }
+
+  & input[type=text],
+  & input[type=email],
+  & input[type=password],
+  & input[type=tel],
+  & input[type=url],
+  & textarea {
+
+    cursor: auto;
+    text-align: left;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px @lightGray;
+    -webkit-appearance: none;
+    min-width: 100%;
+    .font_size(15);
+
+    &:required {
+      //background-color: red;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px @gray;      
+    }
+
+  }
+
+}
+
+.input {
+  &-percent {
+    background: url('/wp-content/themes/tuition.io/assets/img/percent.svg') center right 10px no-repeat;
+    background-size: auto 40%;
+  }
+}

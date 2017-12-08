@@ -1,0 +1,116 @@
+.footer {
+
+  padding: @spaced 0;
+  margin-top: 100px;
+  background-color: @purple;
+
+  & &-title {
+    padding-bottom: 5px;
+    color: @white;
+    font-weight: 500;
+    letter-spacing: .5px
+  }
+
+  & &-divider {
+    background-color: @white25;
+    margin: 10px 0;
+  }
+
+  .menu {
+    &-item {
+      margin: 5px 0;
+      span {
+        color: @white50;
+      }
+      a {
+        padding: 5px 0;
+        text-decoration: none;
+        position: relative;
+        display: inline;
+        &:before {
+          content: '';
+          display: block;
+          height: 1px;
+          width: 0;
+          bottom: 0;
+          position: absolute;
+          background-color: @teal;
+          transition: 200ms ease-in-out;
+        }
+        &:hover {
+          color: @white;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &-top {
+    
+    background-color: @purple;
+    color: @white;
+    padding: @spaced*2 0;
+   
+    a {
+      color: @white50;
+    }
+
+  }
+
+  &-bottom {
+
+    .menu {
+      text-align: center;
+      margin-bottom: @spaced*.5;
+      &-item {
+        display: inline-block;
+        margin: 0 5px;
+        a {
+          color: @gray;
+          border-bottom: 1px solid @white;
+          &:hover {
+            color: @textGray;
+            border-bottom: 1px solid @white;
+          }
+        }
+      }
+    }
+
+  }
+
+  & &-terms {
+    .font_size(13);
+    text-align: center;
+    color: @gray;
+    p, a {
+      color: @gray;
+    }
+  }
+
+  &-stats {
+    background-color: @lighterGray;
+    text-align: center;
+    color: @gray;
+    .font_size(13);
+    padding: @spaced 0;
+    a, p {
+      color: @gray;
+    }
+    a {
+      &:hover {
+        color: @textGray;
+      }
+    }
+    ul, ol {
+      list-style: decimal;
+      li {
+        display: inline-block;
+        color: inherit;
+        list-style: decimal;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,43 @@
+.page {
+
+  &-header {
+
+    &-title {
+      color: @purple;
+      font-weight: bold;
+      line-height: 1;
+      margin: 0;
+      @media @min {
+        .font_size(48);
+      }
+      @media @tablet {
+        .font_size(72);
+      }
+    }
+    &-subtitle {
+      color: @purple;
+      line-height: 1;
+      display: inline-block;
+      margin-bottom: @spaced;
+      @media @min {
+        .font_size(20);
+      }
+      @media @tablet {
+        .font_size(24);
+      }
+    }
+
+    &.simple {
+
+      @media @min {
+        padding-top: 50px;
+      }
+      @media @tablet {
+        padding-top: 100px;
+      }
+
+    }
+
+  }
+
+}
