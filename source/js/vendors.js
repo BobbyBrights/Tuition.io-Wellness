@@ -8,3 +8,4 @@
 // @codekit-prepend "../bower_components/formstone/dist/js/swap.js"
 // @codekit-prepend "../bower_components/formstone/dist/js/lightbox.js"
 // @codekit-prepend "../bower_components/formstone/dist/js/sticky.js"
+// @codekit-prepend "../bower_components/formstone/dist/js/tabs.js"

@@ -7,8 +7,16 @@
 
     color: @white;
     @size: 80px;
-    height: @size;
-    line-height: @size;
+
+    @media @min {
+      height: @size - @spaced;
+      line-height: @size - @spaced;      
+    }
+    @media @tablet {
+      height: @size;
+      line-height: @size;      
+    }
+
     text-decoration: none;
     display: inline-block;
     border-bottom: 5px solid transparent;
@@ -92,18 +100,26 @@
 
     padding-bottom: 0;
     background-color: darken(@purple, 3%);
-    box-shadow: 0 5px @spaced rgba(0,0,0,0.15);
+    //box-shadow: 0 5px @spaced rgba(0,0,0,0.15);
+
+    @media @min {
+      display: none;
+    }
+    @media @tablet {
+      display: block;
+    }
 
   }
 
   &-overlay {
     .cover();
+    z-index: 99;
     position: fixed;
     background-color: @purple;
     transition: 300ms ease;
+    display: none;
 
     @media @min {
-      display: none;
       &.fs-swap-active {
         display: block;
       }
@@ -120,13 +136,33 @@
 
     &-centered {
       .center();
+      width: 100%;
     }
 
     .menu {
       text-align: center;
+      &-sub {
+        text-align: center;
+        &-item {
+          display: inline-block;
+          margin: 0 5px;
+          a {
+            color: @white50;
+            text-decoration: none;
+          }
+        }
+      }
       &-item {
         a {
-          .font_size(64);
+          @media @min {
+            .font_size(24);
+          }
+          @media @tablet {
+            .font_size(48);
+          }
+          @media @desktop {
+            .font_size(64);
+          }
           font-weight: bold;
           text-decoration: none;
           color: @white;

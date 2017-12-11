@@ -25,3 +25,15 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Biotif';
+	src: url('../fonts/biotif-bold.eot');
+	src: url('../fonts/biotif-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/biotif-bold.woff2') format('woff2'),
+	     url('../fonts/biotif-bold.woff') format('woff'),
+	     url('../fonts/biotif-bold.ttf') format('truetype'),
+	     url('../fonts/biotif-bold.svg#youworkforthem') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

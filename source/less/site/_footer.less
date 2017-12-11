@@ -1,8 +1,12 @@
 .footer {
 
   padding: @spaced 0;
-  margin-top: 100px;
   background-color: @purple;
+  text-align: center;
+
+  @media @tablet {
+    text-align: left;
+  }
 
   & &-title {
     padding-bottom: 5px;
@@ -17,8 +21,13 @@
   }
 
   .menu {
+    margin-bottom: @spaced;
+    @media @tablet {
+      margin-bottom: 0;
+    }
     &-item {
       margin: 5px 0;
+      line-height: 1;
       span {
         color: @white50;
       }
@@ -109,6 +118,37 @@
         display: inline-block;
         color: inherit;
         list-style: decimal;
+      }
+    }
+  }
+
+  &-jeni {
+    background-color: darken(@purple, 3%);
+    text-align: center;
+    a {
+      text-decoration: none;
+      &:hover {
+        p {
+          color: @white75;
+        }
+      }
+    }
+    p {
+      color: @white50;
+      @media @min {
+        .font_size(18);  
+      }
+      @media @tablet {
+        .font_size(24);  
+      }
+      strong {
+        color: @white;
+        border-bottom: 1px solid;
+      }
+      &:before {
+        position: relative;
+        top: .25em;
+        margin-right: 8px;
       }
     }
   }

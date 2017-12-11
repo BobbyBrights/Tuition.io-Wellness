@@ -10,6 +10,7 @@
   & &-item {
 
     border-radius: 3px;
+    position: relative;
 
     @media @min {
       padding: 40px 0;
@@ -28,8 +29,14 @@
       box-shadow: 0 10px @spaced rgba(0,0,0,.05);
     }
 
+    &__link {
+      .cover();
+      z-index: 88;
+    }
+
     &__icon {
     }
+
     &__title {
       color: @purple;
       font-weight: bold;
@@ -37,6 +44,7 @@
       line-height: 1;
       margin: @spaced*.75 0;
     }
+    
     &__desc {
       .font_size(19);
       color: @gray;
