@@ -9,7 +9,6 @@
 
   & &-item {
 
-    border-radius: 3px;
     position: relative;
 
     @media @min {
@@ -19,14 +18,37 @@
       padding: 80px 0;
     }
     
-    background-color: @bgGray;
-    margin-bottom: @spaced;
+    background-color: @white;
     transition: 300ms ease;
+    position: relative;
+    z-index: 9;
+    box-shadow: inset 0 0 0 2px transparent, 0 10px transparent;
 
     &:hover {
-      transform: translateY(-3px);
       background-color: @white;
-      box-shadow: 0 10px @spaced rgba(0,0,0,.05);
+      position: relative;
+      z-index: 9;
+      box-shadow: inset 0 0 0 2px @teal, 0 10px @spaced rgba(0,0,0,.05);
+    }
+
+    &--purple {
+      background-color: @purple;
+      margin-top: @spaced;
+      margin-bottom: @spaced;
+      padding: 0;
+      position: relative;
+      &:hover {
+        box-shadow: 0 10px @spaced rgba(0,0,0,.05);
+        background-color: darken(@purple, 10%);
+      }
+      h3 {
+        color: @white;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+      div {
+        color: @white50;
+      }
     }
 
     &__link {
