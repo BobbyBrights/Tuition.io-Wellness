@@ -74,6 +74,18 @@
     }
 
     &-bottom {
+
+      @size: 60px;
+
+      @media @min {
+        height: @size - @spaced;
+        line-height: @size - @spaced;      
+      }
+      @media @tablet {
+        height: @size;
+        line-height: @size;      
+      }
+
       &:hover {
         opacity: 1;
         border-bottom: 5px solid @teal   

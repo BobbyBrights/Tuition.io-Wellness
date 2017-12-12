@@ -2,12 +2,18 @@
 
   @media @min {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
   @media @tablet {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   & &-item {
+
+    &-wrapper {
+      box-shadow: 0 10px @spaced rgba(0,0,0,.05);
+    }
 
     position: relative;
 
@@ -44,7 +50,7 @@
       h3 {
         color: @white;
         margin-top: 0;
-        margin-bottom: 8px;
+        margin-bottom: 2px;
       }
       div {
         color: @white50;
@@ -72,6 +78,42 @@
       color: @gray;
     }
 
+    &-calc {
+      padding: @spaced;
+      display: inline-block;
+      height: 115px;
+      border-right: 1px solid @black25;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+
+      &-desc {
+        height: 115px;
+        display: inline-block;
+      }
+    }
+
+  }
+
+  &-calc {
+    &-image, &-desc {
+      padding-top: @spaced;
+      padding-bottom: @spaced;
+    }
+    &-image {
+      box-shadow: 1px 0 0 0 @black25;
+    }
+    &-desc {
+      padding-left: @spaced;
+    }
+    &-icon {
+      height: 64px;
+      width: 64px;
+      display: block;
+      margin: auto;
+    }
   }
 
 }

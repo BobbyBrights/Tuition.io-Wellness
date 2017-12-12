@@ -30,6 +30,17 @@
 		"oAP": "\/build\/askjeni.html",
 		"oF": 0
 		},
+	"\/source\/assets\/collegecalc.png": {
+		"ft": 32768,
+		"iS": 3477,
+		"oA": 0,
+		"oAP": "\/build\/assets\/collegecalc.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/source\/assets\/jeni.jpg": {
 		"ft": 16384,
 		"iS": 109406,
@@ -4156,6 +4167,48 @@
 		"oAP": "\/build\/parts\/_header.html",
 		"oF": 0
 		},
+	"\/source\/parts\/_page-sub-head.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_page-sub-head.html",
+		"oF": 0
+		},
+	"\/source\/parts\/_paying-529.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_paying-529.html",
+		"oF": 0
+		},
+	"\/source\/parts\/_paying-federal.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_paying-federal.html",
+		"oF": 0
+		},
+	"\/source\/parts\/_paying-plus.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_paying-plus.html",
+		"oF": 0
+		},
+	"\/source\/parts\/_paying-private.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_paying-private.html",
+		"oF": 0
+		},
+	"\/source\/parts\/_paying-scholarships.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_paying-scholarships.html",
+		"oF": 0
+		},
 	"\/source\/payingforcollege.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -4180,7 +4233,7 @@
 	"displayValue": "tiowellness.dev",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_purple",
-	"lastBuiltDate": 534726544
+	"lastBuiltDate": 534788431
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

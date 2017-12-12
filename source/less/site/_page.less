@@ -1,5 +1,7 @@
 .page {
 
+  padding-top: 50px;
+
   &-header {
 
     position: relative;
@@ -28,7 +30,8 @@
         line-height: 1.3;
       }
       @media @tablet {
-        .font_size(72);
+        .font_size(60);
+        letter-spacing: -1px;
         line-height: 1;
       }
       &.top {
@@ -75,7 +78,8 @@
     @media @tablet {
       margin-top: 0;
       border: none;
-      padding: @spaced*2 0 0;
+      padding-bottom: 0;
+      border-bottom: 1px solid @lighterGray;
     }
     &-menu {
       &-item {
@@ -86,22 +90,69 @@
         }
         @media @tablet {
           margin: 0 10px;  
+          margin-bottom: -1px;
         }
         a {
           color: @purple;
           text-decoration: none;
           padding-bottom: 5px;
           transition: 400ms ease;
+          display: inline-block;
+          height: 60px;
+          line-height: 60px;
           &.fs-tabs-enabled {
-            border-bottom: 2px solid transparent; 
+            border-bottom: 3px solid transparent; 
             &:hover {
-              border-bottom: 2px solid @brightTeal;   
+              border-bottom: 3px solid @teal;   
             }
           }
           &.fs-tabs-active {
-            border-bottom: 2px solid @brightTeal; 
+            border-bottom: 3px solid @teal; 
           }
         }
+      }
+    }
+  }
+
+  &-sub-head {
+    &-title, &-desc {
+      background-color: @purple;
+      color: @white;
+      @media @min {
+        padding: @spaced*.5 @spaced;  
+      }
+      @media @tablet {
+        padding: @spaced;  
+      }
+      @media @desktop {
+        padding: @spaced*2;  
+      }
+    }
+    &-title {
+      font-weight: bold;
+      line-height: 1.3;
+      background-color: darken(@purple, 4%);
+      @media @min {
+        .font_size(26);
+        br {
+          display: none;
+        }
+      }
+      @media @tablet {
+        br {
+          display: block;
+        }
+      }
+      @media @desktop {
+        .font_size(32);
+      }
+    }
+    &-desc {
+      @media @min {
+        .font_size(16);
+      }
+      @media @desktop {
+        .font_size(18);
       }
     }
   }
