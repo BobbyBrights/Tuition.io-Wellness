@@ -1,6 +1,50 @@
 .page {
 
   padding-top: 50px;
+  padding-bottom: 50px;
+
+  &-section {
+
+    &-title {
+      font-weight: bold;
+      text-align: center;
+      color: @purple;
+      .font_size(32);
+      margin: @spaced*2 0 @spaced;
+    }
+
+    &-wrapper {
+      > .fs-row {
+        .boxshadow();
+      }
+    }
+
+    &-cell {
+      padding: @spaced*2;
+      background-color: @white;
+      text-align: center;
+      border-right: 1px solid @lighterGray;
+      border-bottom: 1px solid @lighterGray;
+      .font_size(20);
+      color: #888;
+
+      .icon {
+        background-color: #DFF5EE;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        position: relative;
+        margin: auto;
+        margin-bottom: 10px;
+
+        img {
+          .center();
+        }
+      }
+
+    }
+
+  }
 
   &-header {
 

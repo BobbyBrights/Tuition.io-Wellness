@@ -1,0 +1,121 @@
+.accordion {
+
+  background-color: @white;
+  .boxshadow();
+
+  & &-item {
+    
+    position: relative;
+    padding: @spaced;
+    border-bottom: 1px solid #eee;
+
+    @media @min {
+      padding-left: 100px;
+      padding-right: 50px;
+    }
+
+    @media @tablet {
+      padding-left: 100px;
+      padding-right: 150px;
+    }
+
+    @media @desktop {
+      padding-left: 100px;
+      padding-right: 150px;
+    }
+
+    &-number {
+      @size: 50px;
+      height: @size;
+      width: @size;
+      line-height: @size;
+      border-radius: 50%;
+      background-color: @teal;
+      color: @white;
+      text-align: center;
+      .font_size(24);
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(17px);
+      margin-left: @spaced;
+    }
+
+    &-title {
+      color: @gray;
+      @media @min {
+        .font_size(18);
+      }
+      @media @tablet {
+        .font_size(20);
+      }
+      @media @desktop {
+        .font_size(22);
+      }
+    }
+    
+    &-content {
+      display: none;
+      padding: @spaced 0;
+      line-height: 1.7;
+      color: @gray;
+      @media @min {
+        .font_size(15);
+      }
+      @media @tablet {
+        .font_size(16);
+      }
+      @media @desktop {
+        .font_size(16);
+      }
+    }
+
+    ul {
+      margin: 20px 0 0;
+      @media @desktop {
+        max-width: 75%;  
+      }
+      li {
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: @spaced;
+        color: @gray;
+        &:before {
+          content: '';
+          display: block;
+          height: 8px;
+          width: 8px;
+          border-radius: 50%;
+          background-color: @teal;
+          position: absolute;
+          left: 0;
+          top: 9px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &.fs-swap-active {
+      .accordion-item-content {
+        display: block;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:after {
+      position: absolute;
+      color: @purple;
+      right: @spaced;
+      top: 50%;
+      .font_size(20);
+      margin-top: -13px;
+    }
+
+  }
+
+}
