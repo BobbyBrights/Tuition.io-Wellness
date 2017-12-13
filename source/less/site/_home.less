@@ -18,10 +18,12 @@
     position: relative;
 
     @media @min {
-      padding: 40px 0;
+      padding: @spaced*1.5;
+      border-bottom: 1px solid @lighterGray;
     }
     @media @tablet {
       padding: 80px 0;
+      border-bottom: none;
     }
     
     background-color: @white;
@@ -68,9 +70,15 @@
     &__title {
       color: @purple;
       font-weight: bold;
-      .font_size(32);
       line-height: 1;
-      margin: @spaced*.75 0;
+      @media @min {
+        .font_size(24);
+        margin: @spaced*.5 0;
+      }
+      @media @tablet {
+        .font_size(32);
+        margin: @spaced*.75 0;
+      }
     }
     
     &__desc {

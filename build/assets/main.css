@@ -6089,9 +6089,19 @@ html.fs-swap-active {
   font-weight: bold;
   text-align: center;
   color: #50278C;
-  font-size: 32px;
-  font-size: 2rem;
   margin: 50px 0 25px;
+}
+@media screen and (min-width: 300px) {
+  .page-section-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 740px) {
+  .page-section-title {
+    font-size: 32px;
+    font-size: 2rem;
+  }
 }
 .page-section-title.top {
   margin-top: 0;
@@ -6125,14 +6135,24 @@ html.fs-swap-active {
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
 }
 .page-section-cell {
-  padding: 50px;
   background-color: #fff;
   text-align: center;
-  border-right: 1px solid #E7E7EC;
-  border-bottom: 1px solid #E7E7EC;
   font-size: 20px;
   font-size: 1.25rem;
   color: #888;
+}
+@media screen and (min-width: 300px) {
+  .page-section-cell {
+    padding: 31.25px;
+    border-bottom: 1px solid #E7E7EC;
+  }
+}
+@media screen and (min-width: 740px) {
+  .page-section-cell {
+    padding: 50px;
+    border-right: 1px solid #E7E7EC;
+    border-bottom: 1px solid #E7E7EC;
+  }
 }
 .page-section-cell .icon {
   background-color: #DFF5EE;
@@ -6202,9 +6222,12 @@ html.fs-swap-active {
 }
 @media screen and (min-width: 300px) {
   .page-header-title {
-    font-size: 42px;
-    font-size: 2.625rem;
+    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1.3;
+  }
+  .page-header-title br {
+    display: none;
   }
 }
 @media screen and (min-width: 740px) {
@@ -6213,6 +6236,9 @@ html.fs-swap-active {
     font-size: 3.75rem;
     letter-spacing: -1px;
     line-height: 1;
+  }
+  .page-header-title br {
+    display: block;
   }
 }
 .page-header-title.top {
@@ -6275,7 +6301,7 @@ html.fs-swap-active {
 }
 @media screen and (min-width: 300px) {
   .page-nav-menu-item {
-    margin: 0 8px 8px;
+    margin: 0 8px 0;
   }
 }
 @media screen and (min-width: 740px) {
@@ -6310,13 +6336,15 @@ html.fs-swap-active {
 @media screen and (min-width: 300px) {
   .page-sub-head-title,
   .page-sub-head-desc {
-    padding: 12.5px 25px;
+    padding: 25px 15px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 740px) {
   .page-sub-head-title,
   .page-sub-head-desc {
     padding: 25px;
+    text-align: left;
   }
 }
 @media screen and (min-width: 980px) {
@@ -6386,12 +6414,14 @@ html.fs-swap-active {
 }
 @media screen and (min-width: 300px) {
   .home .home-item {
-    padding: 40px 0;
+    padding: 37.5px;
+    border-bottom: 1px solid #E7E7EC;
   }
 }
 @media screen and (min-width: 740px) {
   .home .home-item {
     padding: 80px 0;
+    border-bottom: none;
   }
 }
 .home .home-item:hover {
@@ -6430,10 +6460,21 @@ html.fs-swap-active {
 .home .home-item__title {
   color: #50278C;
   font-weight: bold;
-  font-size: 32px;
-  font-size: 2rem;
   line-height: 1;
-  margin: 18.75px 0;
+}
+@media screen and (min-width: 300px) {
+  .home .home-item__title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin: 12.5px 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  .home .home-item__title {
+    font-size: 32px;
+    font-size: 2rem;
+    margin: 18.75px 0;
+  }
 }
 .home .home-item__desc {
   font-size: 19px;
@@ -6482,12 +6523,14 @@ html.fs-swap-active {
 }
 @media screen and (min-width: 300px) {
   .accordion .accordion-item {
-    padding-left: 100px;
+    padding: 15px;
+    padding-left: 50px;
     padding-right: 50px;
   }
 }
 @media screen and (min-width: 740px) {
   .accordion .accordion-item {
+    padding: 25px;
     padding-left: 100px;
     padding-right: 150px;
   }
@@ -6503,28 +6546,43 @@ html.fs-swap-active {
   display: block;
 }
 .accordion .accordion-item-number {
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
   border-radius: 50%;
   background-color: #51A2BA;
   color: #fff;
   text-align: center;
-  font-size: 24px;
-  font-size: 1.5rem;
   position: absolute;
   left: 0;
   top: 0;
-  transform: translateY(17px);
-  margin-left: 25px;
+}
+@media screen and (min-width: 300px) {
+  .accordion .accordion-item-number {
+    margin-left: 15px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    transform: translateY(15px);
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .accordion .accordion-item-number {
+    margin-left: 25px;
+    font-size: 24px;
+    font-size: 1.5rem;
+    transform: translateY(17px);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+  }
 }
 .accordion .accordion-item-title {
   color: #979797;
 }
 @media screen and (min-width: 300px) {
   .accordion .accordion-item-title {
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 @media screen and (min-width: 740px) {
@@ -6604,11 +6662,24 @@ html.fs-swap-active {
 .accordion .accordion-item:after {
   position: absolute;
   color: #50278C;
-  right: 25px;
-  top: 45px;
-  font-size: 20px;
-  font-size: 1.25rem;
-  margin-top: -13px;
+}
+@media screen and (min-width: 300px) {
+  .accordion .accordion-item:after {
+    top: 30px;
+    right: 15px;
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-top: -13px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .accordion .accordion-item:after {
+    top: 45px;
+    right: 25px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-top: -13px;
+  }
 }
 form.form {
   padding: 50px;

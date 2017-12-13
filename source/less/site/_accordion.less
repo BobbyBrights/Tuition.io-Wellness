@@ -10,11 +10,13 @@
     border-bottom: 1px solid #eee;
 
     @media @min {
-      padding-left: 100px;
+      padding: 15px;
+      padding-left: 50px;
       padding-right: 50px;
     }
 
     @media @tablet {
+      padding: @spaced;
       padding-left: 100px;
       padding-right: 150px;
     }
@@ -31,25 +33,37 @@
 
     &-number {
       @size: 50px;
-      height: @size;
-      width: @size;
-      line-height: @size;
+      
       border-radius: 50%;
       background-color: @teal;
       color: @white;
       text-align: center;
-      .font_size(24);
       position: absolute;
       left: 0;
       top: 0;
-      transform: translateY(17px);
-      margin-left: @spaced;
+      
+      @media @min {
+        margin-left: 15px;
+        .font_size(14);
+        transform: translateY(15px);
+        height: @size * .5;
+        width: @size * .5;
+        line-height: @size * .5;
+      }
+      @media @tablet {
+        margin-left: @spaced;
+        .font_size(24);
+        transform: translateY(17px);
+        height: @size;
+        width: @size;
+        line-height: @size;
+      }
     }
 
     &-title {
       color: @gray;
       @media @min {
-        .font_size(18);
+        .font_size(15);
       }
       @media @tablet {
         .font_size(20);
@@ -119,10 +133,18 @@
     &:after {
       position: absolute;
       color: @purple;
-      right: @spaced;
-      top: 45px;
-      .font_size(20);
-      margin-top: -13px;
+      @media @min {
+        top: 30px;
+        right: 15px;
+        .font_size(18);
+        margin-top: -13px;
+      }
+      @media @tablet {
+        top: 45px;
+        right: @spaced;
+        .font_size(20);
+        margin-top: -13px;
+      }
     }
 
   }
