@@ -11,6 +11,30 @@
       color: @purple;
       .font_size(32);
       margin: @spaced*2 0 @spaced;
+      &.top {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-desc {
+      color: @gray;
+      line-height: 1.7; 
+      text-align: center;
+    }
+
+    &-subtitle {
+      color: @gray;
+      line-height: 1;
+      text-align: center;
+      @media @min {
+        .font_size(20);
+        margin-bottom: @spaced*2;
+      }
+      @media @tablet {
+        .font_size(24);
+        margin-bottom: @spaced*2;
+      }
     }
 
     &-wrapper {
@@ -50,6 +74,33 @@
 
     position: relative;
 
+    &-wrapper {
+      background-color: @purple;
+      @media @min {
+        padding: @spaced;  
+      }
+      @media @tablet {
+        padding: @spaced*2;  
+      }
+      @media @desktop {
+        padding: @spaced*2;  
+      }
+      
+      & .page {
+        &-header {
+          &-title {
+            color: @white;
+          }
+          &-subtitle {
+            color: @white;
+          }
+          &-desc {
+            color: @white50;
+          }
+        }
+      }
+    }
+
     &-img {
       border-radius: 50%;
       display: block;
@@ -84,7 +135,7 @@
     }
     &-subtitle {
       color: @gray;
-      line-height: 1;
+      line-height: 1.4;
       display: inline-block;
       @media @min {
         .font_size(20);
@@ -97,6 +148,9 @@
       &.bottom {
         margin-bottom: 0;
       }
+    }
+    &-desc {
+      padding-top: 10px;
     }
 
     &.simple {

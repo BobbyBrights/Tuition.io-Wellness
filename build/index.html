@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="stylesheet" href="assets/main.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<body class="fs-grid">
+<div id="wrapper">
+  <div id="nav" class="nav sticky">
+    <div class="fs-row">
+      <div class="fs-cell fs-all-half">
+        <a href="#" class="nav-button swap" data-swap-target="#nav-overlay, body, html, #nav" data-swap-linked=".overlay">
+          <img class="nav-button-icon menu" src="assets/menu.svg" alt="menu">
+          <img class="nav-button-icon close" src="assets/x.svg" alt="close">
+        </a>
+        <a href="index.html" class="nav-button">Chegg</a>
+        <a href="index.html" class="nav-button nav-button--em fs-sm-hide">powered by tuition.io</a>
+      </div>
+      <div class="fs-cell fs-all-half text-right">
+        <a href="#" class="nav-button nav-button--em fs-md-hide fs-lg-hide">powered by tuition.io</a>
+        <a href="#" class="nav-button nav-button--em fs-sm-hide">Hello, Alex</a>
+        <a href="#" class="nav-button  fs-sm-hide">Sign Out</a>
+      </div>
+    </div>
+  </div>
+  <div id="nav-sub" class="nav nav--bottom">
+    <div class="fs-row">
+      <div class="fs-cell fs-all-full">
+        <div class="fs-row">
+          <a href="#nav-locked" class="lightbox fs-cell fs-all-third"><span class="nav-button nav-button-bottom nav-button--inactive ss-gizmo ss-lock">Employer Contribution</span></a>
+          <a href="#nav-locked" class="lightbox fs-cell fs-all-third text-center"><span class="nav-button nav-button-bottom nav-button--inactive ss-gizmo ss-lock">My Loans</span></a>
+          <a href="index.html" class="fs-cell fs-all-third text-right"><span class="nav-button nav-button-bottom nav-button--active">Student Loan Wellness</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="nav-overlay">
+    <div id="nav-overlay-centered">
+      <ul class="menu">
+        <li class="menu-item"><a href="payingforcollege.html">Paying for College</a></li>
+        <li class="menu-item"><a href="refinancing.html">Refinancing</a></li>
+        <li class="menu-item"><a href="askjeni.html">Ask Jeni</a></li>
+        <li class="menu-item"><a href="collegecostcalc.html">College Cost Calculator</a></li>
+      </ul>
+      <ul class="menu-sub">
+        <li class="menu-sub-item"><a href="#" class="nav-button nav-button--em">Hello, Alex</a></li>
+        <li class="menu-sub-item"><a href="#" class="nav-button">Sign Out</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div class="page-header simple">
+  <div class="fs-row">
+    <div class="fs-cell fs-all-full text-center">
+      <span class="page-header-subtitle">Welcome to Student Loan Wellness</span>
+      <h1 class="page-header-title">How Can <br class="fs-md-hide fs-lg-hide">We Help?</h1>
+    </div>
+  </div>
+</div>
+
+<div class="home">
+  <div class="fs-row">
+    <div class="fs-cell fs-all-full">
+      <div class="fs-row">
+        <div class="fs-cell fs-lg-half fs-md-half fs-sm-full fs-contained">
+          <div class="home-item text-center">
+            <a href="payingforcollege.html" class="home-item__link"></a>
+            <img src="assets/refresh-ccw.svg" class="home-item__icon" alt="icon">
+            <h3 class="home-item__title">Paying for College</h3>
+            <div class="home-item__desc">Learn more about <br>loan types &amp; financial aid</div>
+          </div>
+        </div>
+        <div class="fs-cell fs-lg-half fs-md-half fs-sm-full fs-contained">
+          <div class="home-item text-center">
+            <a href="optimizer.html" class="home-item__link"></a>
+            <img src="assets/refresh-ccw.svg" class="home-item__icon" alt="icon">
+            <h3 class="home-item__title">Optimizer</h3>
+            <div class="home-item__desc">Find the best payoff strategies <br>for managing your student loan debt.</div>
+          </div>
+        </div>
+        <div class="fs-cell fs-lg-half fs-md-half fs-sm-full fs-contained">
+          <div class="home-item text-center">
+            <a href="refinancing.html" class="home-item__link"></a>
+            <img src="assets/refresh-ccw.svg" class="home-item__icon" alt="icon">
+            <h3 class="home-item__title">Refinancing</h3>
+            <div class="home-item__desc">Learn more about <br>refinancing your student loans</div>
+          </div>
+        </div>
+        <div class="fs-cell fs-lg-half fs-md-half fs-sm-full fs-contained">
+          <div class="home-item text-center">
+            <a href="askjeni.html" class="home-item__link"></a>
+            <img src="assets/refresh-ccw.svg" class="home-item__icon" alt="icon">
+            <h3 class="home-item__title">Ask Jeni</h3>
+            <div class="home-item__desc">Ask Jeni Burkhart, <br>our student loan expert</div>
+          </div>
+        </div>
+        <div class="fs-cell fs-all-full fs-contained">
+          <div class="home-item--purple home-calc">
+            <!--<a href="collegecostcalc.html" class="home-item__link"></a>-->
+            <div class="fs-row">
+              <div class="home-calc-image fs-cell fs-lg-2 fs-md-1 fs-sm-hide fs-padded text-center"><img src="assets/collegecalc.png" class="home-item__icon home-calc-icon" alt="icon"></div>
+              <div class="home-calc-desc fs-cell fs-lg-10 fs-md-5 fs-sm-3">
+                <h3 class="home-item__title color--white">College Cost Calculator</h3>
+                <div class="home-item__desc">Find out how much you need to save for college</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="footer" class="footer">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-10 fs-md-full fs-sm-3 fs-all-justify-center">
+        <div class="fs-row">
+          <div class="fs-cell fs-lg-fourth fs-md-fourth fs-sm-3">
+            <h4 class="footer-title">tuition.io</h4>
+            <ul class="menu">
+              <li class="menu-item"><a href="#"><span>Press</span></a></li>
+              <li class="menu-item"><a href="#"><span>FAQ</span></a></li>
+            </ul>
+          </div>
+          <div class="fs-cell fs-lg-fourth fs-md-fourth fs-sm-3">
+            <h4 class="footer-title">Company</h4>
+            <ul class="menu">
+              <li class="menu-item"><a href="#"><span>About Us</span></a></li>
+              <li class="menu-item"><a href="#"><span>Latest News</span></a></li>
+              <li class="menu-item"><a href="#"><span>Press Releases</span></a></li>
+            </ul>
+          </div>
+          <div class="fs-cell fs-lg-fourth fs-md-fourth fs-sm-3">
+            <h4 class="footer-title">Need Help</h4>
+            <ul class="menu">
+              <li class="menu-item"><a href="#"><span>Press</span></a></li>
+              <li class="menu-item"><a href="#"><span>FAQ</span></a></li>
+            </ul>
+          </div>
+          <div class="fs-cell fs-lg-fourth fs-md-fourth fs-sm-3">
+            <h4 class="footer-title">Connect</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="nav-locked">
+  <div id="nav-locked__inside">
+    <div class="centered">
+      <span class="ss-gizmo ss-lock"></span>
+      <h3>Sorry, this content is locked</h3>
+    </div>
+  </div>
+</div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

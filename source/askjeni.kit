@@ -1,13 +1,81 @@
 <!-- @include parts/header.kit -->
 
-<div class="page-header simple text-center">
+<div class="page-header simple">
   <div class="fs-row">
-    <div class="fs-cell fs-lg-12 fs-md-4 fs-sm-3">
-      <img src="assets/jeni.jpg" class="page-header-img" />
+    <div class="fs-cell fs-all-full text-center">
       <h1 class="page-header-title top">Ask Jeni</h1>
-      <span class="page-header-subtitle bottom">Lorem Ipsum dolor sit amet</span>
     </div>
   </div>
+</div>
+
+<div class="page simple">
+  <div class="fs-row equalize">
+    <div class="fs-cell fs-lg-3 fs-md-2 fs-sm-3 fs-contained equalize-child">
+      <img src="assets/jeni.jpg" class="img-responsive">
+    </div>
+    <div class="fs-cell fs-lg-9 fs-md-4 fs-sm-3 fs-right fs-contained">
+      <div class="page-header-wrapper bg--teal equalize-child">
+        <span class="page-header-subtitle bottom">Our student loan expert Jeni Burkhart will answer your most pressing questions about student loan debt and repayment.</span>
+        <p class="page-header-desc">
+          You and other Tuition.io members can submit questions about student loan debt,
+          and our student loan expert will answer 1-2 questions per week. Keep checking back
+          here to stay-up-to-date on  tips and tricks for managing your student loan debt.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <hr class="invisible">
+  <hr class="invisible">
+
+  <div class="fs-row">
+    <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3 fs-all-justify-center">
+      <h3 class="page-section-title top">How Can We Help?</h3>
+      <h4 class="page-section-subtitle">Submit a question to Jeni</h4>
+      <form class="form">
+        <div class="fs-row">
+          <div class="fs-cell fs-lg-half fs-md-half fs-sm-3">
+            <label>Your Name</label>
+            <input type="text" placeholder="Your Name">
+          </div>
+          <div class="fs-cell fs-lg-half fs-md-half fs-sm-3">
+            <label>Email Address</label>
+            <input type="text" placeholder="Email Address">
+          </div>
+          <div class="fs-cell fs-all-full">
+            <label>Your Question</label>
+            <textarea type="text" placeholder="Your Question" rows="1"></textarea>
+          </div>
+          <div class="fs-cell fs-all-half fs-sm-full fs-all-justify-center text-center">
+            <hr class="invisible compact">
+            <input type="submit" class="button button-cta small" value='Submit'>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <hr class="invisible">
+  <hr class="invisible">
+
+  <h3 class="page-section-title">Previous Questions</h3>
+
+  <div class="fs-row">
+    <div class="fs-cell fs-all-full">
+      <div class="accordion">
+        <!-- $accTitle   = <small>Jane asks:</small> I've heard about two different ways to pay for my loans called avalanche and snowball. How do I decide which one to use? Which one would save me more money? -->
+        <!-- $accCount = 1 -->
+        <!-- $accContent = Shop Around -->
+        <!-- @include parts/accordion-item.kit -->
+
+        <!-- $accTitle   = <small>John asks:</small> As someone who has graduate school loans, I have been told that - based on my current salary and op ng to pay back the loan via income based repayment - I will not be able to pay back student loan debt in my life me. What are my best op ons? -->
+        <!-- $accCount = 2 -->
+        <!-- $accContent = Shop Around -->
+        <!-- @include parts/accordion-item.kit -->
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- @include parts/footerspacer.kit -->

@@ -24,6 +24,11 @@
       padding-right: 150px;
     }
 
+    small {
+      color: @teal;
+      display: block;
+    }
+
     &-number {
       @size: 50px;
       height: @size;
@@ -51,6 +56,10 @@
       }
       @media @desktop {
         .font_size(22);
+      }
+      &:hover {
+        cursor: pointer;
+        color: @purple;
       }
     }
     
@@ -111,7 +120,7 @@
       position: absolute;
       color: @purple;
       right: @spaced;
-      top: 50%;
+      top: 45px;
       .font_size(20);
       margin-top: -13px;
     }

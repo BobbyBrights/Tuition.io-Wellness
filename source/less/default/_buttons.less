@@ -1,0 +1,30 @@
+@size: 50px;
+
+.button {
+
+  background-color: @purple;
+  color: @white;
+  text-decoration: none;
+  font-weight: bold;
+  height: @size;
+  line-height: @size;
+  display: inline-block;
+  padding: 0 @spaced;
+  border-radius: 2px;
+  text-align: center;
+  font-family: 'Biotif', sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  &-cta {
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    .font_size(24);
+    &.small {
+      height: @size;
+      line-height: @size;
+      .font_size(17)
+    }
+  }
+
+}

@@ -3,9 +3,9 @@
 $(document).ready(function(){
   $('.lightbox').lightbox();
   $('.swap').swap();
- // $('.equalize-parent').equalize({
- //   target: '.equalize-child'
- // });
+  $('.equalize').equalize({
+    target: '.equalize-child'
+  });
   $('.tab').tabs({
     theme: '',
     mobileMaxWidth: '320px'

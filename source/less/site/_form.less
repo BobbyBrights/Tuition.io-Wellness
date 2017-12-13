@@ -1,0 +1,25 @@
+form.form {
+
+  padding: @spaced*2;
+  background-color: @white;
+  .boxshadow();
+
+  & label {
+    display: none;
+  }
+
+  & input, & textarea {
+    display: block;
+    border: 0;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: none;
+    border-bottom: 1px solid @lighterGray;
+    &:focus {
+      box-shadow: none;
+      border-bottom: 1px solid @teal;
+    }
+  }
+
+}

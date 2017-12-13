@@ -33,7 +33,7 @@
   ],
   "private": true,
   "dependencies": {
-    "formstone": "^1.4.1",
+    "formstone": "^1.4.2",
     "normalize-css": "^7.0.0",
     "HTML5-Reset": "html5-reset#^2.1.3"
   }
