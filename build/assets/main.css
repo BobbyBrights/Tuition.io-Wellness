@@ -5657,7 +5657,7 @@ img.rounded {
   background: #979797;
 }
 .bg--bgGray {
-  background: #F9F9F9;
+  background: #f6f6f6;
 }
 .bg--purple {
   background: #50278C;
@@ -6085,6 +6085,11 @@ html.fs-swap-active {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.page-content {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
+  background-color: #fff;
+  padding: 50px;
+}
 .page-section-title {
   font-weight: bold;
   text-align: center;
@@ -6403,11 +6408,10 @@ html.fs-swap-active {
   }
 }
 .home .home-item {
-  background-color: #fff;
   transition: 300ms ease;
   position: relative;
   z-index: 9;
-  box-shadow: inset 0 0 0 2px transparent, 0 10px transparent;
+  background-color: #fff;
 }
 .home .home-item-wrapper {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -6415,13 +6419,14 @@ html.fs-swap-active {
 @media screen and (min-width: 300px) {
   .home .home-item {
     padding: 37.5px;
-    border-bottom: 1px solid #E7E7EC;
+    border-bottom: 1px solid #f6f6f6;
   }
 }
 @media screen and (min-width: 740px) {
   .home .home-item {
-    padding: 80px 0;
+    padding: 60px 0;
     border-bottom: none;
+    box-shadow: inset -1px -1px 0 0px #f6f6f6;
   }
 }
 .home .home-item:hover {
@@ -6471,14 +6476,14 @@ html.fs-swap-active {
 }
 @media screen and (min-width: 740px) {
   .home .home-item__title {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     margin: 18.75px 0;
   }
 }
 .home .home-item__desc {
-  font-size: 19px;
-  font-size: 1.1875rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   color: #979797;
 }
 .home .home-item-calc {
@@ -6703,6 +6708,22 @@ form.form input:focus,
 form.form textarea:focus {
   box-shadow: none;
   border-bottom: 1px solid #51A2BA;
+}
+.glossary .glossary-item {
+  border-bottom: 1px solid #E7E7EC;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+.glossary .glossary-item:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.glossary .glossary-item h4 {
+  color: #50278C;
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 .footer {
   padding: 25px 0;
