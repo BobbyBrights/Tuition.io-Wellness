@@ -5683,7 +5683,7 @@ img.rounded {
 .alert {
   font-size: 15px;
   font-size: 0.9375rem;
-  background: #E7E7EC;
+  background: #F1F1F1;
   color: #444444;
   display: block;
   margin: 0 0 10px 0;
@@ -5713,7 +5713,7 @@ img.rounded {
   text-align: right;
 }
 .divider {
-  background: #E7E7EC;
+  background: #F1F1F1;
 }
 .divider.vertical {
   width: 1px;
@@ -5776,7 +5776,7 @@ hr {
   margin: 25px 0;
 }
 hr.thin {
-  background: #E7E7EC;
+  background: #F1F1F1;
 }
 hr.compact {
   margin: 12.5px 0;
@@ -5875,7 +5875,7 @@ form textarea:focus {
 }
 body,
 html {
-  background-color: #f9f9f9;
+  background-color: #FBFBFB;
   font-family: 'Biotif', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -5885,10 +5885,10 @@ html.fs-swap-active {
   overflow: hidden;
 }
 .nav {
-  background-color: #50278C;
+  background-color: #fff;
 }
 .nav .nav-button {
-  color: #fff;
+  color: #50278C;
   text-decoration: none;
   display: inline-block;
   border-bottom: 5px solid transparent;
@@ -5938,11 +5938,11 @@ html.fs-swap-active {
   font-weight: 600;
 }
 .nav .nav-button--inactive {
-  opacity: .5;
+  color: #979797;
 }
 .nav .nav-button--active {
   font-weight: 600;
-  border-bottom: 5px solid #51A2BA;
+  border-bottom: 5px solid #50278C;
 }
 @media screen and (min-width: 300px) {
   .nav .nav-button-bottom {
@@ -5963,14 +5963,21 @@ html.fs-swap-active {
 #nav {
   position: relative;
   z-index: 9;
+  border-bottom: 1px solid #F1F1F1;
 }
 #nav.fs-swap-active {
   width: 100%;
   z-index: 100;
+  background-color: #50278C;
+  border-bottom: 1px solid transparent;
+}
+#nav.fs-swap-active a {
+  color: #fff;
 }
 #nav-sub {
   padding-bottom: 0;
-  background-color: #492480;
+  background-color: #fff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.02);
 }
 @media screen and (min-width: 300px) {
   #nav-sub {
@@ -6088,7 +6095,16 @@ html.fs-swap-active {
 .page-content {
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
   background-color: #fff;
-  padding: 50px;
+}
+@media screen and (min-width: 300px) {
+  .page-content {
+    padding: 25px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .page-content {
+    padding: 50px;
+  }
 }
 .page-section-title {
   font-weight: bold;
@@ -6149,14 +6165,14 @@ html.fs-swap-active {
 @media screen and (min-width: 300px) {
   .page-section-cell {
     padding: 31.25px;
-    border-bottom: 1px solid #E7E7EC;
+    border-bottom: 1px solid #F1F1F1;
   }
 }
 @media screen and (min-width: 740px) {
   .page-section-cell {
     padding: 50px;
-    border-right: 1px solid #E7E7EC;
-    border-bottom: 1px solid #E7E7EC;
+    border-right: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
   }
 }
 .page-section-cell .icon {
@@ -6288,8 +6304,8 @@ html.fs-swap-active {
   .page-nav {
     margin-top: 25px;
     padding: 10px 0 5px;
-    border-top: 1px solid #E7E7EC;
-    border-bottom: 1px solid #E7E7EC;
+    border-top: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
   }
 }
 @media screen and (min-width: 740px) {
@@ -6297,7 +6313,7 @@ html.fs-swap-active {
     margin-top: 0;
     border: none;
     padding-bottom: 0;
-    border-bottom: 1px solid #E7E7EC;
+    border-bottom: 1px solid #F1F1F1;
   }
 }
 .page-nav-menu-item {
@@ -6702,7 +6718,7 @@ form.form textarea {
   padding-left: 0;
   padding-right: 0;
   box-shadow: none;
-  border-bottom: 1px solid #E7E7EC;
+  border-bottom: 1px solid #F1F1F1;
 }
 form.form input:focus,
 form.form textarea:focus {
@@ -6710,7 +6726,7 @@ form.form textarea:focus {
   border-bottom: 1px solid #51A2BA;
 }
 .glossary .glossary-item {
-  border-bottom: 1px solid #E7E7EC;
+  border-bottom: 1px solid #F1F1F1;
   margin-bottom: 25px;
   padding-bottom: 25px;
 }
@@ -6817,7 +6833,7 @@ form.form textarea:focus {
   color: #979797;
 }
 .footer-stats {
-  background-color: #E7E7EC;
+  background-color: #F1F1F1;
   text-align: center;
   color: #979797;
   font-size: 13px;

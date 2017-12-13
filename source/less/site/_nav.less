@@ -1,11 +1,11 @@
 .nav {
 
-  background-color: @purple;
+  background-color: @white;
   //padding: @spaced 0;
 
   & &-button {
 
-    color: @white;
+    color: @purple;
     @size: 80px;
 
     @media @min {
@@ -65,12 +65,12 @@
     }
 
     &--inactive {
-      opacity: .5;
+      color: @gray;
     }
 
     &--active {
       font-weight: 600;
-      border-bottom: 5px solid @teal;
+      border-bottom: 5px solid @purple;
     }
 
     &-bottom {
@@ -100,19 +100,24 @@
 
   position: relative;
   z-index: 9;
-
+  border-bottom: 1px solid @lighterGray;
   &.fs-swap-active {
     //position: fixed;
     width: 100%;
     z-index: 100;
+    background-color: @purple;
+    border-bottom: 1px solid transparent;
+    a {
+      color: @white;
+    }
   }
   //padding-top: @spaced;
 
   &-sub {
 
     padding-bottom: 0;
-    background-color: darken(@purple, 3%);
-    //box-shadow: 0 5px @spaced rgba(0,0,0,0.15);
+    background-color: @white;
+    box-shadow: 0 5px @spaced rgba(0,0,0,0.02);
 
     @media @min {
       display: none;

@@ -6,7 +6,13 @@
   &-content {
     .boxshadow();
     background-color: @white;
-    padding: 50px;
+    @media @min {
+      padding: @spaced;  
+    }
+    @media @desktop {
+      padding: 50px;  
+    }
+    
   }
 
   &-section {
