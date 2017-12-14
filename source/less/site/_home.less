@@ -12,6 +12,7 @@
   & &-item {
 
     &-wrapper {
+      border: 1px solid @lighterGray;
       box-shadow: 0 10px @spaced rgba(0,0,0,.05);
     }
 
@@ -66,6 +67,16 @@
     }
 
     &__icon {
+      position: relative;
+      &:before {
+        content: '11';
+        display: block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-color: @brightTeal;
+        .center();
+      }
     }
 
     &__title {

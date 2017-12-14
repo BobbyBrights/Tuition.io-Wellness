@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="58px" viewBox="0 0 68 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Icon-Copy-4" stroke="#4F268C" stroke-width="2">
+            <g id="Group-8" transform="translate(7.000000, 2.000000)">
+                <circle id="Oval" cx="27" cy="27" r="27"></circle>
+                <path d="M27,35 C19.0469154,35 11.9225486,38.681953 7,44.5 C11.9225486,50.318047 19.0469154,54 27,54 C34.9530846,54 42.0774514,50.318047 47,44.5 C42.0774514,38.681953 34.9530846,35 27,35 Z" id="Shape"></path>
+                <path d="M27,6 L27,8" id="Shape"></path>
+                <path d="M12,12 L13.41422,13.41422" id="Shape"></path>
+                <path d="M6,27 L8,27" id="Shape"></path>
+                <path d="M49,27 L47,27" id="Shape"></path>
+                <path d="M42.4142,12 L41,13.41422" id="Shape"></path>
+                <path d="M27,35 L46,19" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
