@@ -6,13 +6,20 @@
   &-content {
     .boxshadow();
     background-color: @white;
+    .font_size(17);
     @media @min {
       padding: @spaced;  
     }
     @media @desktop {
       padding: 50px;  
     }
-    
+    p {
+      color: @textGray;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &-section {

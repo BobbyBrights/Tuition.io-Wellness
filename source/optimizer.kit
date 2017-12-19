@@ -1,5 +1,26 @@
 <!-- @include parts/header.kit -->
 
+<!-- $slides_terms  = By using this Loan Optimizer you acknowledge that the content and tools provided on this site are for informational purposes only and are provided “as-is” without warranty of any kind, implied expressed or otherwise.  Student loan programs change frequently and we encourage you to independently verify any information shared on this site. -->
+
+<!-- $slide_1_title = We’re Here to Help -->
+<!-- $slide_1_desc  = Finding the right way to pay off your student loan debt can be challenging. That's why we've put together over 150 different strategies to optimize your repayment plan. We'll start by gathering some basic information, combine that with your current student loan information, and provide you with suggestions on how to reach your financial goals. -->
+
+<!-- $slide_2_title = How comfortable are you with paying off your student loans? -->
+<!-- $slide_2_q1    = I can easily afford my monthly loan payment. -->
+<!-- $slide_2_q2    = I sometimes have trouble affording my monthly loan payment.  -->
+<!-- $slide_2_q3    = I cannot afford my monthly loan payment. -->
+
+<!-- $slide_3_title = Tell us about yourself so we can find eligible programs: -->
+<!-- $slide_4_title = Do any of the following apply? If not, proceed to the next step. -->
+
+<!-- $slide_5_title = Congratulations! The Optimizer found 6 programs that you may be eligible for. Select the programs you would like more information about: -->
+<!-- $slide_5_a1    = Forgiveness with Pay As Your Earn -->
+<!-- $slide_5_a2    = Income-Based Repayment Plan (IBR Plan) -->
+<!-- $slide_5_a3    = Income-Contigent Repayment Plan (ICR Plan) -->
+<!-- $slide_5_a4    = Pay as Your Earn Repayment Plan (PAYE Plan) -->
+<!-- $slide_5_a5    = Rhode Island Wavemaker Fellowship -->
+<!-- $slide_5_a6    = Standard Repayment Plan -->
+
 <div class="page-header simple">
   <div class="fs-row">
     <div class="fs-cell fs-all-full text-center">
@@ -9,8 +30,43 @@
   </div>
 </div>
 
-<div class="page">
-
+<div class="page optimizer">
+  <div class="fs-row">
+    <div class="fs-cell fs-all-full">
+      <div class="optimizer-wrappre">
+        <ul class="optimizer-pagination text-center">
+          <li class="page-nav-menu-item"><a class="tab" href="#opt-1" data-tabs-group="tab-opt" data-tabs-active="true">Get Started</a></li>
+          <li class="page-nav-menu-item"><a class="tab" href="#opt-2" data-tabs-group="tab-opt">Financial Health</a></li>
+          <li class="page-nav-menu-item"><a class="tab" href="#opt-3" data-tabs-group="tab-opt">About You</a></li>
+          <li class="page-nav-menu-item"><a class="tab" href="#opt-4" data-tabs-group="tab-opt">Optimizations</a></li>
+          <li class="page-nav-menu-item"><a class="tab" href="#opt-5" data-tabs-group="tab-opt">Action Plan</a></li>
+        </ul>
+        <div id="opt-1" class="optimizer-slide">
+          <h3 class="optimizer-title"><!-- $slide_1_title --></h3>
+          <div class="optimizer-content"><!-- @include parts/opt_slide1.kit --></div>
+          <a href="#opt-2" class="tab button button-cta small optimizer-btn" data-tabs-group="tab-opt">Start Saving</a>
+        </div>
+        <div id="opt-2" class="optimizer-slide">
+          <h3 class="optimizer-title"><!-- $slide_2_title --></h3>
+          <div class="optimizer-content"><!-- @include parts/opt_slide2.kit --></div>
+          <a href="#opt-3" class="tab button button-cta small optimizer-btn" data-tabs-group="tab-opt">Start Saving</a>
+        </div>
+        <div id="opt-3" class="optimizer-slide">
+          <h3 class="optimizer-title"><!-- $slide_3_title --></h3>
+          <div class="optimizer-content"><!-- @include parts/opt_slide3.kit --></div>
+          <a href="#opt-4" class="tab button button-cta small optimizer-btn" data-tabs-group="tab-opt">Start Saving</a>
+        </div>
+        <div id="opt-4" class="optimizer-slide">
+          <h3 class="optimizer-title"><!-- $slide_4_title --></h3>
+          <div class="optimizer-content"><!-- @include parts/opt_slide4.kit --></div>
+          <a href="#" class="tab button button-cta small optimizer-btn">Print</a>
+        </div>
+      </div>
+      <div id="opt-5" class="optimizer-terms text-center">
+        <!-- $slides_terms -->
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- @include parts/footerspacer.kit -->

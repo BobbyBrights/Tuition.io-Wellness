@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="253px" height="253px" viewBox="0 0 253 253" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>emoji-indifferent</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="emoji-indifferent">
+            <g id="if_face-happy_414573" fill="#000000" fill-rule="nonzero">
+                <path d="M126.5,253 C56.7471094,253 0,196.252891 0,126.5 C0,56.7471094 56.7471094,0 126.5,0 C196.252891,0 253,56.7471094 253,126.5 C253,196.252891 196.252891,253 126.5,253 Z M126.5,15.8125 C65.4677031,15.8125 15.8125,65.4677031 15.8125,126.5 C15.8125,187.534273 65.4677031,237.1875 126.5,237.1875 C187.534273,237.1875 237.1875,187.534273 237.1875,126.5 C237.1875,65.4677031 187.534273,15.8125 126.5,15.8125 Z" id="Shape"></path>
+                <g id="Group" transform="translate(71.000000, 78.000000)">
+                    <ellipse id="Oval" cx="15.8571429" cy="16.5" rx="15.8571429" ry="16"></ellipse>
+                    <ellipse id="Oval" cx="95.1428571" cy="16.5" rx="15.8571429" ry="16"></ellipse>
+                </g>
+            </g>
+            <path d="M76.5,187.5 L180.5,148.5" id="Line" stroke="#000000" stroke-width="18" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

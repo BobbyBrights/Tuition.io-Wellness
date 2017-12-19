@@ -24,7 +24,7 @@
       <div class="accordion">
         <!-- $accTitle   = Should I refinance? -->
         <!-- $accCount = 1 -->
-        <!-- $accContent = Shop Around -->
+                                <!-- $accContent = Shop Around -->
         <!-- @include parts/accordion-item.kit -->
 
         <!-- $accTitle   = Who Should Not Refinance? -->
@@ -57,13 +57,32 @@
   
   <div class="fs-row">
     <div class="fs-cell fs-lg-6 fs-md-4 fs-sm-3 fs-all-justify-center">
-      <a href="#credible" class="lightbox button button-cta">Launch App</a>
+      <a href="#credible" id="credible-btn" class="lightbox button button-cta">Launch App</a>
     </div>
   </div>
 
 </div>
 
-  
+<div id="credible" style="display:none">  
+  <div id="credible-div">
+    <div id="credibleEnv"></div>
+  </div>
+</div>
+
+<script>
+    //$(window).on('open.lightbox', function(){
+    //  setTimeout(function(){
+    //    CredibleClient.init('#credible-div', {
+    //      environment: '{{ $credibleEnv }}',
+    //      scrollTopPad: 50
+    //    });
+    //  }, 1000);
+    //});
+    CredibleClient.init('#credible-div', {
+      environment: '{{ $credibleEnv }}',
+      scrollTopPad: 50
+    });
+</script>
 
 
 <!-- @include parts/footerspacer.kit -->
