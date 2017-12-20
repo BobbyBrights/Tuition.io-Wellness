@@ -3,6 +3,20 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  &-sidebar {
+    &-title {
+      color: @purple;
+      font-weight: bold;
+      margin-bottom: @spaced*.75;
+      .obscured {
+        background-color: @lightGray;
+        color: @lightGray;
+        padding: 1px 5px;
+        pointer-events: none;
+      }
+    }
+  }
+
   &-content {
     .boxshadow();
     background-color: @white;
@@ -296,4 +310,16 @@
     }
   }
 
+}
+
+.password {
+  &-wrapper {
+    .cover();
+    z-index: 999;
+    position: fixed;
+    background-color: @black50;
+  }
+  &-container {
+    .center();
+  }
 }

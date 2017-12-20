@@ -13,17 +13,28 @@
   border-radius: 2px;
   text-align: center;
   font-family: 'Biotif', sans-serif;
+  border: 0;
   -webkit-font-smoothing: antialiased;
+
+  &-secondary {
+    background-color: @bgGray;
+    color: @gray;
+  }
 
   &-cta {
     height: 80px;
     line-height: 80px;
     width: 100%;
+    display: block;
     .font_size(24);
     &.small {
       height: @size;
       line-height: @size;
       .font_size(17)
+    }
+    &.inactive {
+      pointer-events: none;
+      background-color: @lightGray;
     }
   }
 
