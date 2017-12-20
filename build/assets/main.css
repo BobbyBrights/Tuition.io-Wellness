@@ -6962,6 +6962,7 @@ html.fs-swap-active {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 @media screen and (min-width: 300px) {
   .home {
