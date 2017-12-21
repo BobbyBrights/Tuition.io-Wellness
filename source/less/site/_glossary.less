@@ -20,4 +20,25 @@
 
   }
 
+  &-alphabet {
+    text-align: center;
+    margin-bottom: @spaced;
+    padding-bottom: @spaced;
+    border-bottom: 1px solid @lighterGray;
+    line-height: 1;
+    li {
+      display: inline-block;
+      margin: 0 3px;
+      .font_size(12);
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: @teal;
+        &.empty {
+          color: @lightGray;
+        }
+      }
+    }
+  }
+
 }

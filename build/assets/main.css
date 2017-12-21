@@ -6742,6 +6742,11 @@ html.fs-swap-active {
     margin-bottom: 50px;
   }
 }
+.page-section-subtitle a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #CBCBD2;
+}
 .page-section-wrapper > .fs-row {
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
 }
@@ -7365,6 +7370,27 @@ html.fs-swap-active {
   font-weight: bold;
   font-size: 18px;
   font-size: 1.125rem;
+}
+.glossary-alphabet {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #F1F1F1;
+  line-height: 1;
+}
+.glossary-alphabet li {
+  display: inline-block;
+  margin: 0 3px;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+.glossary-alphabet li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #51A2BA;
+}
+.glossary-alphabet li a.empty {
+  color: #CBCBD2;
 }
 .optimizer .optimizer-wrapper {
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
