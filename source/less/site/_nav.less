@@ -28,6 +28,48 @@
       margin-right: 8px;
     }
 
+    &-signout {
+      display: none;
+      padding-left: 10px;
+      position: relative;
+      margin-left: 10px;
+      &:before {
+        content: '';
+        display: block;
+        height: 22%;
+        position: absolute;
+        left: 0;
+        top: 54%;
+        transform: translateY(-50%);
+        width: 1px;
+        background-color: @purple;
+      }
+    }
+
+    &-wrapper {
+      &:hover {
+        .nav-button-signout {
+          display: inline-block;
+        }
+      }
+    }
+
+    &-menu {
+      float: left;
+    }
+
+    &-logo {
+      display: inline-block;
+      width: auto;
+      float: left;
+      @media @min {
+        height: @size - @spaced;
+      }
+      @media @tablet {
+        height: @size;
+      }
+    }
+
     &-icon {
       position: relative;
       top: .35em;

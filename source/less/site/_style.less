@@ -47,3 +47,22 @@ body,html {
 .hero {
   height: 400px;
 }
+
+
+.carousel_fade .fs-carousel-item {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0s linear, visibility 0s linear;
+    transition: opacity 0s linear, visibility 0s linear;
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+}
+
+.carousel_fade .fs-carousel-item.fs-carousel-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}

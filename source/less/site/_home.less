@@ -68,14 +68,17 @@
 
     &__icon {
       position: relative;
-      &:before {
-        content: '11';
-        display: block;
-        height: 80px;
-        width: 80px;
+      @size: 80px;
+      &-wrapper {
+        background-color: lighten(@brightTeal, 20%);
         border-radius: 50%;
-        background-color: @brightTeal;
-        .center();
+        height: @size;
+        width: @size;
+        margin: auto;
+        position: relative;
+        img {
+          .center();
+        }
       }
     }
 

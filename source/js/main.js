@@ -32,12 +32,16 @@ $(document).ready(function(){
   $('.swap').swap();
   $("input[type='checkbox'], input[type='radio']").checkbox();
   $('.carousel').carousel();
-  $('.equalize').equalize({
+  $('.equalize-parent').equalize({
     target: '.equalize-child'
   });
   $('.tab').tabs({
     theme: '',
     mobileMaxWidth: '320px'
+  });
+  $('.tab').on('update.tabs', function(){
+    var tab = $(this).attr('href');
+    $(tab).find(".equalize-parent").equalize("resize")
   });
   optimizer();
   $('.about-form').on('change', function(){

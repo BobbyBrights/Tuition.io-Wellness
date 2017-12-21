@@ -6398,6 +6398,22 @@ html.fs-swap-active {
 .hero {
   height: 400px;
 }
+.carousel_fade .fs-carousel-item {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0s linear, visibility 0s linear;
+  transition: opacity 0s linear, visibility 0s linear;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.carousel_fade .fs-carousel-item.fs-carousel-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
 .nav {
   background-color: #fff;
 }
@@ -6424,6 +6440,44 @@ html.fs-swap-active {
   position: relative;
   top: .120em;
   margin-right: 8px;
+}
+.nav .nav-button-signout {
+  display: none;
+  padding-left: 10px;
+  position: relative;
+  margin-left: 10px;
+}
+.nav .nav-button-signout:before {
+  content: '';
+  display: block;
+  height: 22%;
+  position: absolute;
+  left: 0;
+  top: 54%;
+  transform: translateY(-50%);
+  width: 1px;
+  background-color: #50278C;
+}
+.nav .nav-button-wrapper:hover .nav-button-signout {
+  display: inline-block;
+}
+.nav .nav-button-menu {
+  float: left;
+}
+.nav .nav-button-logo {
+  display: inline-block;
+  width: auto;
+  float: left;
+}
+@media screen and (min-width: 300px) {
+  .nav .nav-button-logo {
+    height: 55px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .nav .nav-button-logo {
+    height: 80px;
+  }
 }
 .nav .nav-button-icon {
   position: relative;
@@ -7035,13 +7089,15 @@ html.fs-swap-active {
 .home .home-item__icon {
   position: relative;
 }
-.home .home-item__icon:before {
-  content: '11';
-  display: block;
+.home .home-item__icon-wrapper {
+  background-color: #cdf3e8;
+  border-radius: 50%;
   height: 80px;
   width: 80px;
-  border-radius: 50%;
-  background-color: #7BDFC3;
+  margin: auto;
+  position: relative;
+}
+.home .home-item__icon-wrapper img {
   left: 50%;
   position: absolute;
   top: 50%;
@@ -7271,16 +7327,16 @@ html.fs-swap-active {
     margin-top: -13px;
   }
 }
-form.form {
+.form {
   padding: 50px;
   background-color: #fff;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
 }
-form.form label {
+.formform label {
   display: none;
 }
-form.form input,
-form.form textarea {
+.formform input,
+.formform textarea {
   display: block;
   border: 0;
   border-radius: 0;
@@ -7289,8 +7345,8 @@ form.form textarea {
   box-shadow: none;
   border-bottom: 1px solid #F1F1F1;
 }
-form.form input:focus,
-form.form textarea:focus {
+.formform input:focus,
+.formform textarea:focus {
   box-shadow: none;
   border-bottom: 1px solid #51A2BA;
 }
