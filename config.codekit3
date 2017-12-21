@@ -3916,6 +3916,13 @@
 		"oF": 1,
 		"oS": 3
 		},
+	"\/source\/coffee.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/build\/coffee.html",
+		"oF": 0
+		},
 	"\/source\/collegecostcalc.kit": {
 		"cB": 0,
 		"ft": 2048,
