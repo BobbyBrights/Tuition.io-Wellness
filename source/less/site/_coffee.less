@@ -1,0 +1,67 @@
+.coffee {
+
+  background-color: @purple;
+  color: @white50;
+  .font_size(20);
+  line-height: 2;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    @size: 15px;
+    top: @size;
+    left: @size;
+    bottom: @size;
+    right: @size;
+    border: 1px solid @white25;
+    z-index: 1;
+  }
+
+  div {
+    color: inherit;
+  }
+
+  span {
+    color: @white;
+  }
+
+  & &-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  & &-var {
+    border-bottom: 1px solid
+  }
+
+  & &-title {
+    color: @white;
+    .font_size(24);
+  }
+
+  & &-slider {
+    
+    .slider {
+
+      width: 100%;
+
+      //&-track {
+      //  height: 2px;
+      //  background-color: transparent!important;
+      //  color: transparent;
+      //  .slider-selection {
+      //    background-color: transparent!important;
+      //  }
+      //  &-high {
+      //    background-color: @white;
+      //  }
+      //}
+    
+    }
+
+  }
+
+}
+

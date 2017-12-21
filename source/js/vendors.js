@@ -12,3 +12,5 @@
 // @codekit-prepend "../bower_components/formstone/dist/js/equalize.js"
 // @codekit-prepend "../bower_components/formstone/dist/js/carousel.js"
 // @codekit-prepend "../bower_components/formstone/dist/js/checkbox.js"
+
+// @codekit-prepend "../bower_components/slider/plugin/bootstrap-slider.min.js"

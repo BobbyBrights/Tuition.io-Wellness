@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="61px" viewBox="0 0 47 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="Page-1" transform="translate(1.000000, 1.000000)">
+                <polygon id="Fill-1" fill="#5D219D" points="2.9375 14.161 5.7195 58.11 38.8975 58.11 39.3815 50.463 41.6795 14.161"></polygon>
+                <polyline id="Stroke-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="39.3815 50.4638 41.6795 14.1608 2.9375 14.1608 5.7195 58.1098 38.8985 58.1098"></polyline>
+                <polygon id="Fill-4" fill="#5D219D" points="0 14.1607 44.631 14.1607 44.631 5.8237 0 5.8237"></polygon>
+                <polygon id="Stroke-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0 14.1607 44.631 14.1607 44.631 5.8247 0 5.8247"></polygon>
+                <polygon id="Fill-7" fill="#5D219D" points="39.8679 -0.0001 5.6359 -0.0001 4.2449 5.8249 41.2589 5.8249"></polygon>
+                <polygon id="Stroke-8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="39.8679 -0.0001 5.6359 -0.0001 4.2449 5.8249 41.2589 5.8249"></polygon>
+                <path d="M3.563,24.0556 L41.052,24.0556 L3.563,24.0556 Z" id="Fill-10" fill="#5D219D"></path>
+                <path d="M3.5632,24.0556 L41.0512,24.0556" id="Stroke-11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
