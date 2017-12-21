@@ -6,16 +6,14 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard">
-            <g id="Page-1" transform="translate(1.000000, 1.000000)">
-                <polygon id="Fill-1" fill="#5D219D" points="2.9375 14.161 5.7195 58.11 38.8975 58.11 39.3815 50.463 41.6795 14.161"></polygon>
-                <polyline id="Stroke-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="39.3815 50.4638 41.6795 14.1608 2.9375 14.1608 5.7195 58.1098 38.8985 58.1098"></polyline>
-                <polygon id="Fill-4" fill="#5D219D" points="0 14.1607 44.631 14.1607 44.631 5.8237 0 5.8237"></polygon>
-                <polygon id="Stroke-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0 14.1607 44.631 14.1607 44.631 5.8247 0 5.8247"></polygon>
-                <polygon id="Fill-7" fill="#5D219D" points="39.8679 -0.0001 5.6359 -0.0001 4.2449 5.8249 41.2589 5.8249"></polygon>
-                <polygon id="Stroke-8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="39.8679 -0.0001 5.6359 -0.0001 4.2449 5.8249 41.2589 5.8249"></polygon>
-                <path d="M3.563,24.0556 L41.052,24.0556 L3.563,24.0556 Z" id="Fill-10" fill="#5D219D"></path>
-                <path d="M3.5632,24.0556 L41.0512,24.0556" id="Stroke-11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
+            <polygon id="Fill-1" fill="#4A2C87" points="3.9375 15.161 6.7195 59.11 39.8975 59.11 40.3815 51.463 42.6795 15.161"></polygon>
+            <polyline id="Stroke-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="40.3815 51.4638 42.6795 15.1608 3.9375 15.1608 6.7195 59.1098 39.8985 59.1098"></polyline>
+            <polygon id="Fill-4" fill="#4A2C87" points="1 15.1607 45.631 15.1607 45.631 6.8237 1 6.8237"></polygon>
+            <polygon id="Stroke-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="1 15.1607 45.631 15.1607 45.631 6.8247 1 6.8247"></polygon>
+            <polygon id="Fill-7" fill="#4A2C87" points="40.8679 0.9999 6.6359 0.9999 5.2449 6.8249 42.2589 6.8249"></polygon>
+            <polygon id="Stroke-8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="40.8679 0.9999 6.6359 0.9999 5.2449 6.8249 42.2589 6.8249"></polygon>
+            <path d="M4.563,25.0556 L42.052,25.0556 L4.563,25.0556 Z" id="Fill-10" fill="#5D219D"></path>
+            <path d="M4.5632,25.0556 L42.0512,25.0556" id="Stroke-11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         </g>
     </g>
 </svg>

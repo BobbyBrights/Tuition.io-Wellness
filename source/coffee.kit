@@ -18,7 +18,7 @@
             If I bought <span class="coffee-qty coffee-var">5</span> coffees less per week and put the money have a higher interest rate than towards my student loan debt, how much could I save?
           </div>
           <hr class="invisible">
-          <div class="coffee-slider fs-cell fs-lg-8 fs-md-4 fs-sm-3 fs-contained fs-all-justify-center">
+          <div class="coffee-slider fs-cell fs-lg-10 fs-md-4 fs-sm-3 fs-contained fs-all-justify-center">
             <input  data-slider-id='ex1Slider' type="range" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="5" name="contribution" id="contribution"/>
           </div>
           <hr class="invisible">
@@ -41,9 +41,9 @@
 <script>
   $(document).ready(function(){
     var mySlider = $("#contribution").slider({
-      tooltip: 'hide',
+      tooltip: 'always',
       formatter: function(value) {
-        return '$' + value;
+        return value;
       }
     });
   });

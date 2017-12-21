@@ -196,9 +196,10 @@
 	width: 47px;
 	height: 61px;
 	background: url('coffee.svg');
-	@trans: (47*.5) - @slider-track-height;
+	@trans: (61*.5) - @slider-track-height;
 	transform: translateY(-@trans);
 	cursor: grab;
+	z-index: 10;
 	margin-left: -(47px*.5)!important;
 	//background-color: @slider-primary;
 	//#gradient > .vertical(@slider-primary-top, @slider-primary-bottom);
