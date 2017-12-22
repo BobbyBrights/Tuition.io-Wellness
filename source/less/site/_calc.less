@@ -1,7 +1,39 @@
 .calc {
+  &-form {
+    padding: 2px;
+    select {
+      .font_size(13);
+      margin-bottom: 0;
+      @media @min {
+        margin: 10px 0;
+      }
+      @media @tablet {
+        margin: 10px 0;
+      }
+      @media @desktop {
+        margin: 0
+      }
+    }
+  }
   &-item {
     border-bottom: 1px solid @lighterGray;
-    padding: @spaced 0;
+    @media @min {
+      padding: @spaced*.5 0;
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+    @media @tablet {
+      text-align: left;
+      padding: @spaced 0;
+    }
+    @media @desktop {
+      padding: @spaced 0;
+      br {
+        display: block;
+      }
+    }
     &-title {
       color: @purple;
       font-weight: bold;

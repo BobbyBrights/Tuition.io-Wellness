@@ -6597,11 +6597,11 @@ form select {
   width: 100%;
   border-radius: 2px;
   margin-bottom: 10px;
-  padding: 8px 10px;
+  padding: 8px 25px 8px 10px!important;
   box-shadow: 0 0 0 1px #CBCBD2;
   border: 0;
-  background: url('/wp-content/themes/tuition.io/assets/img/chevron-down.svg') center right 10px no-repeat;
-  background-size: 20px auto;
+  background: url('chevron-down.svg') center right 10px no-repeat;
+  background-size: 15px auto;
   font-family: 'Biotif', sans-serif;
   -webkit-appearance: none;
 }
@@ -7942,9 +7942,54 @@ html.fs-swap-active {
   border-width: 5px 5px 0;
   border-top-color: #000;
 }
+.calc-form {
+  padding: 2px;
+}
+.calc-form select {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 300px) {
+  .calc-form select {
+    margin: 10px 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  .calc-form select {
+    margin: 10px 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .calc-form select {
+    margin: 0;
+  }
+}
 .calc-item {
   border-bottom: 1px solid #F1F1F1;
-  padding: 25px 0;
+}
+@media screen and (min-width: 300px) {
+  .calc-item {
+    padding: 12.5px 0;
+    text-align: center;
+  }
+  .calc-item br {
+    display: none;
+  }
+}
+@media screen and (min-width: 740px) {
+  .calc-item {
+    text-align: left;
+    padding: 25px 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .calc-item {
+    padding: 25px 0;
+  }
+  .calc-item br {
+    display: block;
+  }
 }
 .calc-item-title {
   color: #50278C;
