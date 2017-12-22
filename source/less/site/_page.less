@@ -93,6 +93,20 @@
       .font_size(20);
       color: #888;
 
+      span {
+        color: @purple;
+      }
+
+      a {
+        color: @teal;
+        text-decoration: none;
+        &:before, &:after {
+          position: relative;
+          top: .125em;
+          margin-left: 5px;
+        }
+      }
+
       @media @min {
         padding: @spaced*1.25;
         border-bottom: 1px solid @lighterGray;
