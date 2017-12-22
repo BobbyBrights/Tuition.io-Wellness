@@ -14,39 +14,18 @@
     <div class="page-content">
       <div class="carousel carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
         <div class="carousel-slide">
-          <div class="calc-item">
-            <div class="fs-row">
-              <h3 class="fs-cell fs-all-half calc-item-title">Current Age</h3>
-              <h3 class="fs-cell fs-all-half calc-item-variable text-right">Current Age</h3>
-            </div>
-            <p class="calc-item-desc">Most students will enter college at age 18.</p>
-          </div>
-          <div class="calc-item">
-            <div class="fs-row">
-              <h3 class="fs-cell fs-all-half calc-item-title">Type of College</h3>
-              <h3 class="fs-cell fs-all-half calc-item-variable text-right">Current Age</h3>
-            </div>
-            <p class="calc-item-desc">
-              We use the average cost of schools in the United States.  <br>
-              These average costs include tuition and fees, books and  <br>
-              supplies, room and board, etc.
-            </p>
-          </div>
-          <div class="calc-item">
-            <div class="fs-row">
-              <h3 class="fs-cell fs-all-half calc-item-title">Years of College</h3>
-              <h3 class="fs-cell fs-all-half calc-item-variable text-right">Current Age</h3>
-            </div>
-            <p class="calc-item-desc">Most students attend college between 2-6 years.</p>
-          </div>
-          <div class="calc-item">
-            <div class="fs-row">
-              <h3 class="fs-cell fs-all-half calc-item-title">Rate of Inflation</h3>
-              <h3 class="fs-cell fs-all-half calc-item-variable text-right">Current Age</h3>
-            </div>
-            <p class="calc-item-desc">Education cost inflation is typically 4-8% per year.</p>
-          </div>
-          <a href="#" class="button button-cta">Calculate</a>
+          <form class="calc">
+            <label for="Savings">Savings Amount</label>
+            <input type="number" id="savings" name="Savings" step="500" placeholder="Savings Amount" value="15000">
+            <hr class="invisible compact">
+            <label for="Loan">Loan Amount</label>
+            <input type="number" id="loans" name="Loan" step="500" placeholder="Loan Amount" value="30000">
+            <hr class="invisible compact">
+            <label for="Scholarship">Scholarship + Grant Amount</label>
+            <input type="number" id="scholarship" name="Scholarship" step="500" placeholder="Scholarship + Grant Amount" value="25000">
+            <hr class="invisible compact">
+            <a href="#" class="tab button button-cta small" onClick="$('.carousel').carousel('jumpItem', 2);">Submit</a>
+          </form>
         </div>
         <div class="carousel-slide">
           <hr class="invisible">

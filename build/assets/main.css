@@ -7942,6 +7942,26 @@ html.fs-swap-active {
   border-width: 5px 5px 0;
   border-top-color: #000;
 }
+.calc-item {
+  border-bottom: 1px solid #F1F1F1;
+  padding: 25px 0;
+}
+.calc-item-title {
+  color: #50278C;
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.calc-item-variable {
+  color: #979797;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.calc-item-desc {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #979797;
+}
 .footer {
   padding: 25px 0;
   background-color: #50278C;
