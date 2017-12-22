@@ -14,3 +14,4 @@
 // @codekit-prepend "../bower_components/formstone/dist/js/checkbox.js"
 
 // @codekit-prepend "../bower_components/slider/plugin/bootstrap-slider.min.js"
+// @codekit-prepend "../bower_components/chart.js/dist/Chart.bundle.js"

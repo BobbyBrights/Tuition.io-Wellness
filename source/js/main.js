@@ -1,14 +1,14 @@
 // @codekit-prepend "vendors.js"
 
 function optimizer(){
-  $optItem = $('.opt-options__item');
-  $optItem.on('click', function(){
-    $optItem.removeClass('active');
+  var optItem = $('.opt-options__item');
+  optItem.on('click', function(){
+    optItem.removeClass('active');
     $(this).addClass('active');
     $('#opt-2 .button').removeClass('inactive');
   });
-  $optCheck = $('.optimizations-item input');
-  $optCheck.change(function() {
+  var optCheck = $('.optimizations-item input');
+  optCheck.change(function() {
     $('#opt-4 .button').removeClass('inactive');
   });
 }

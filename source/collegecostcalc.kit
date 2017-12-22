@@ -4,10 +4,124 @@
   <div class="fs-row">
     <div class="fs-cell fs-all-full text-center">
       <h1 class="page-header-title top">College Cost Calculator</h1>
-      <span class="page-header-subtitle bottom">Lorem Ipsum dolor sit amet</span>
+      <span class="page-header-subtitle">Lorem Ipsum dolor sit amet</span>
     </div>
   </div>
 </div>
+
+<div class="fs-row">
+  <div class="fs-cell fs-all-full">
+    <div class="page-content">
+      <div class="carousels carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":true,"single":true}'>
+        <div class="carousel-slide">
+          <form class="calc">
+            <label for="Savings">Savings Amount</label>
+            <input type="number" id="savings" name="Savings" step="500" placeholder="Savings Amount" value="15000">
+            <hr class="invisible compact">
+            <label for="Loan">Loan Amount</label>
+            <input type="number" id="loans" name="Loan" step="500" placeholder="Loan Amount" value="30000">
+            <hr class="invisible compact">
+            <label for="Scholarship">Scholarship + Grant Amount</label>
+            <input type="number" id="scholarship" name="Scholarship" step="500" placeholder="Scholarship + Grant Amount" value="25000">
+            <hr class="invisible compact">
+            <a href="#" class="tab button button-cta small" onClick="$('.carousel').carousel('jumpItem', 2);">Submit</a>
+          </form>
+        </div>
+        <div class="carousel-slide">
+          <hr class="invisible">
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    window.onload = function() {
+      var ctx = document.getElementById("canvas").getContext("2d");;
+      var savings = $('#savings').val();
+      var loans = $('#loans').val();
+      var scholarships = $('#scholarship').val();
+      //var total = [savings + loans + scholarships]
+      var total = [savings + loans + scholarships]
+      //var totals = 50000
+
+      window.myBar = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["Savings", "Loans", "Scholarships + Grants", "Total"],
+          datasets: [{
+            //label: '# of Votes',
+            data: [savings, loans, scholarships, ''],
+            backgroundColor: [
+              '#7CDFC2',
+              '#50A1B9',
+              '#562997',
+              'rgba(75, 192, 192, 0.2)',
+           ],
+          },
+          {
+            //label: '# of Votes',
+            data: [ '','','', savings],
+            backgroundColor: [
+              '#7CDFC2',
+              '#50A1B9',
+              '#562997',
+              '7CDFC2',
+           ],
+          },
+          {
+            //label: '# of Votes',
+            data: [ '','','', loans],
+            backgroundColor: [
+              '#7CDFC2',
+              '#50A1B9',
+              '#562997',
+              '50A1B9',
+           ],
+          },
+          {
+            //label: '# of Votes',
+            data: [ '','','', scholarships],
+            backgroundColor: [
+              '#7CDFC2',
+              '#50A1B9',
+              '#562997',
+              '562997',
+           ],
+          }]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          scales: {
+            xAxes: [{
+              stacked: true
+            }],
+            yAxes: [{
+              stacked: true,
+              ticks: {
+                callback: function(value, index, values) {
+                  return '$' + value;
+                }
+              }
+            }]
+          }
+        }
+      });
+    };
+  });
+  $('.calc input').change(function() {
+  //$('.calc input').on('change',function(){
+    var savings = $('#savings').val();
+    var loans = $('#loans').val();
+    var scholarships = $('#scholarship').val();
+    myBar.update();
+  })
+</script>
 
 <!-- @include parts/footerspacer.kit -->
 <!-- @include parts/footerjeni.kit -->
