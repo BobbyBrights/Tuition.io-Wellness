@@ -7565,6 +7565,22 @@ html.fs-swap-active {
   cursor: pointer;
   color: #50278C;
 }
+.accordion .accordion-item-title span {
+  color: #50278C;
+}
+.accordion .accordion-item-title a {
+  color: #51A2BA;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+.accordion .accordion-item-title a:before,
+.accordion .accordion-item-title a:after {
+  position: relative;
+  top: .125em;
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-left: 8px;
+}
 .accordion .accordion-item-content {
   display: none;
   padding: 25px 0;

@@ -75,6 +75,20 @@
         cursor: pointer;
         color: @purple;
       }
+      span {
+        color: @purple;
+      }
+      a {
+        color: @teal;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        &:before, &:after {
+          position: relative;
+          top: .125em;
+          .font_size(18);
+          margin-left: 8px
+        }
+      }
     }
     
     &-content {
