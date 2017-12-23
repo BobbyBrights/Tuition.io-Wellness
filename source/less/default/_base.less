@@ -129,3 +129,21 @@ form {
     background-size: auto 40%;
   }
 }
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid @lightGray;
+  border-radius: 2px;
+  margin-right: 5px;
+  position: relative;
+  top: -4px;
+  cursor: pointer;
+  &:checked {
+    border: 2px solid @purple;
+    background: url('check.svg');
+    background-size: contain;
+  }
+}

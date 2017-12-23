@@ -1,16 +1,7 @@
 // @codekit-prepend "vendors.js"
 
 function optimizer(){
-  var optItem = $('.opt-options__item');
-  optItem.on('click', function(){
-    optItem.removeClass('active');
-    $(this).addClass('active');
-    $('#opt-2 .button').removeClass('inactive');
-  });
-  var optCheck = $('.optimizations-item input');
-  optCheck.change(function() {
-    $('#opt-4 .button').removeClass('inactive');
-  });
+  
 }
 
 function forms(){
@@ -30,7 +21,7 @@ function forms(){
 $(document).ready(function(){
   $('.lightbox').lightbox();
   $('.swap').swap();
-  $("input[type='checkbox'], input[type='radio']").checkbox();
+  //$("input[type='checkbox'], input[type='radio']").checkbox();
   $('.carousel').carousel();
   $('.equalize-parent').equalize({
     target: '.equalize-child'

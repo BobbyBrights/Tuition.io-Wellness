@@ -6636,6 +6636,23 @@ form textarea:focus {
   background: url('/wp-content/themes/tuition.io/assets/img/percent.svg') center right 10px no-repeat;
   background-size: auto 40%;
 }
+input[type=checkbox] {
+  -webkit-appearance: none;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #CBCBD2;
+  border-radius: 2px;
+  margin-right: 5px;
+  position: relative;
+  top: -4px;
+  cursor: pointer;
+}
+input[type=checkbox]:checked {
+  border: 2px solid #50278C;
+  background: url('check.svg');
+  background-size: contain;
+}
 .button {
   background-color: #50278C;
   color: #fff;
@@ -7784,6 +7801,54 @@ html.fs-swap-active {
 .glossary-alphabet li a.empty {
   color: #CBCBD2;
 }
+.optimizer .ss-gizmo:before,
+.optimizer .ss-gizmo:after {
+  position: relative;
+  top: .125em;
+  margin-left: 8px;
+}
+.optimizer .optimizer-more-link span {
+  color: #51A2BA;
+}
+.optimizer .optimizer-more-link span.off {
+  display: none;
+}
+.optimizer .optimizer-more-link.fs-swap-active span.on {
+  display: none;
+}
+.optimizer .optimizer-more-link.fs-swap-active span.off {
+  display: inline;
+}
+.optimizer-more-content {
+  display: none;
+}
+.optimizer-more-content.fs-swap-active {
+  display: block;
+}
+.optimizer-result-item {
+  border: 1px solid #F1F1F1;
+  padding: 25px;
+}
+.optimizer-result-item a {
+  color: #51A2BA;
+}
+.optimizer-result-item ul li {
+  position: relative;
+  padding-left: 17px;
+  margin-bottom: 8px;
+}
+.optimizer-result-item ul li:before {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #51A2BA;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .optimizer .optimizer-wrapper {
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
 }
@@ -7844,6 +7909,11 @@ html.fs-swap-active {
   text-align: center;
   margin-bottom: 15px;
 }
+.optimizer .optimizer-title-sub {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
 .optimizer .optimizer-buttons {
   text-align: center;
 }
@@ -7885,9 +7955,18 @@ html.fs-swap-active {
   float: left;
   margin-right: 25px;
 }
+.optimizer .opt-options__item p {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
 .optimizer .optimizations-item {
   border-bottom: 1px solid #F1F1F1;
   padding: 15px 0;
+}
+.optimizer .optimizations-item p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding-top: 8px;
 }
 .optimizer .optimizations-item label {
   display: inline-block;

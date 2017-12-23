@@ -40,6 +40,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/source\/assets\/check.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/assets\/check.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/source\/assets\/chegg.png": {
 		"ft": 32768,
 		"iS": 5317,
@@ -12115,6 +12125,20 @@
 		"ft": 2048,
 		"oA": 1,
 		"oAP": "\/build\/parts\/_opt_slide4.html",
+		"oF": 0
+		},
+	"\/source\/parts\/_opt_slide5.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_opt_slide5.html",
+		"oF": 0
+		},
+	"\/source\/parts\/_opt_slide6.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/build\/parts\/_opt_slide6.html",
 		"oF": 0
 		},
 	"\/source\/parts\/_page-sub-head.kit": {
