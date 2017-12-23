@@ -6524,7 +6524,7 @@ img.rounded {
   top: 35%;
 }
 .nomargin {
-  margin: 0;
+  margin: 0!important;
 }
 .hidden {
   display: none;
@@ -6754,6 +6754,14 @@ html.fs-swap-active {
   top: .120em;
   margin-right: 8px;
 }
+@media screen and (min-width: 300px) {
+  .nav .nav-button--powered {
+    padding-top: 14px;
+    line-height: 1.4;
+    font-size: 11px;
+    font-size: 0.6875rem;
+  }
+}
 .nav .nav-button-signout {
   display: none;
   padding-left: 10px;
@@ -6854,6 +6862,35 @@ html.fs-swap-active {
 }
 #nav.fs-swap-active a {
   color: #fff;
+}
+#nav-mobile {
+  background-color: #50278C;
+  z-index: 99;
+  width: 100%;
+  text-align: center;
+}
+#nav-mobile .nav-button {
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 0.75rem;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.25);
+  padding: 0 15px;
+}
+#nav-mobile .nav-button.first {
+  padding-left: 0;
+}
+#nav-mobile .nav-button.last {
+  box-shadow: none;
+  padding-right: 0;
+}
+@media screen and (min-width: 740px) {
+  #nav-mobile {
+    display: none;
+  }
 }
 #nav-sub {
   padding-bottom: 0;
@@ -7203,6 +7240,9 @@ html.fs-swap-active {
     font-size: 24px;
     font-size: 1.5rem;
     margin-bottom: 25px;
+  }
+  .page-header-subtitle br {
+    display: none;
   }
 }
 .page-header-subtitle.bottom {
@@ -7618,6 +7658,16 @@ html.fs-swap-active {
     font-size: 1rem;
   }
 }
+.accordion .accordion-item-content a {
+  color: #50278C;
+  text-decoration: none;
+}
+.accordion .accordion-item-content a:before,
+.accordion .accordion-item-content a:after {
+  position: relative;
+  top: .225em;
+  margin-left: 5px;
+}
 .accordion .accordion-item ul {
   margin: 20px 0 0;
 }
@@ -7971,13 +8021,44 @@ html.fs-swap-active {
   border-width: 5px 5px 0;
   border-top-color: #000;
 }
+.calc-slide {
+  background-color: #fff;
+}
+.calc-back {
+  float: right;
+  position: absolute;
+  right: 0;
+}
+.calc-title {
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #50278C;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
 .calc-form {
   padding: 2px;
+}
+.calc-form-field input,
+.calc-form-field .input {
+  color: #50278C;
+  font-weight: bold;
+  font-family: 'Biotif', sans-serif;
+  padding: 0!important;
+  box-shadow: none!important;
+  max-width: 100%;
+  border-bottom: 1px solid #F1F1F1;
+  font-size: 28px !important;
+  font-size: 1.75rem !important;
+  background: url('dollar-sign.svg') left center no-repeat;
+  background-size: auto 50% ;
+  padding-left: 26.25px !important;
 }
 .calc-form select {
   font-size: 13px;
   font-size: 0.8125rem;
   margin-bottom: 0;
+  color: #50278C;
 }
 @media screen and (min-width: 300px) {
   .calc-form select {

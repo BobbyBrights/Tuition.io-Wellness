@@ -15,3 +15,4 @@
 
 // @codekit-prepend "../bower_components/slider/plugin/bootstrap-slider.min.js"
 // @codekit-prepend "../bower_components/chart.js/dist/Chart.bundle.js"
+// @codekit-prepend "../bower_components/maskmoney/dist/jquery.maskMoney.min.js"

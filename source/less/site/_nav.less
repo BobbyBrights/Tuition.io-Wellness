@@ -28,6 +28,14 @@
       margin-right: 8px;
     }
 
+    &--powered {
+      @media @min {
+        padding-top: 14px;
+        line-height: 1.4;
+        .font_size(11);
+      }
+    }
+
     &-signout {
       display: none;
       padding-left: 10px;
@@ -154,6 +162,37 @@
     }
   }
   //padding-top: @spaced;
+
+  &-mobile {
+    background-color: @purple;
+    //position: fixed;
+    //bottom: 0;
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+
+    .nav-button {
+      color: @white;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      font-weight: bold;
+      .font_size(12);
+      box-shadow: 1px 0 0 @black25;
+      padding: 0 15px;
+      &.first {
+        padding-left: 0;
+      }
+      &.last {
+        box-shadow: none;
+        padding-right: 0;
+      }
+    }
+
+    @media @tablet {
+      display: none;
+    }
+  }
 
   &-sub {
 

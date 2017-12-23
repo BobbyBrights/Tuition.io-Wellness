@@ -13,7 +13,8 @@
   <div class="fs-cell fs-all-full">
     <div class="page-content">
       <div class="carousel carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
-        <div class="carousel-slide">
+        <div class="carousel-slide  calc-slide">
+          <h2 class="calc-title nomargin">Start Here</h2>
           <form class="calc-form">
             <div class="calc-item">
               <div class="fs-row">
@@ -129,12 +130,48 @@
               </div>
               <p class="calc-item-desc">Most students attend college between 2-6 years.</p>
             </div>
-            <a href="#" class="button button-cta small">Calculate</a>
+            <a href="#" class="button button-cta small" onClick='$(".carousel").carousel("jump", 2);'>Calculate</a>
           </form>
         </div>
-        <div class="carousel-slide">
-          <hr class="invisible">
-          <canvas id="canvas"></canvas>
+        <div class="carousel-slide calc-slide">
+          <a href="#" class="calc-back" onClick='$(".carousel").carousel("jump", 1);'><img src="assets/x-circle.svg" alt="back"></a>
+          <div class="fs-row">
+            <div class="fs-cell fs-all-full">
+              <h2 class="calc-title">Estimated Cost of College</h2>
+            </div>
+            <div class="fs-cell fs-lg-8 fs-md-full fs-sm-full text-center">
+              <canvas id="canvas"></canvas>
+              <hr class="invisible compact">
+              <small>If you want to pay $<span id="savings-desc">#</span> from your savings, you’ll need to save $<span id="calc-desc">$$$</span> 
+              <br>per month until your child goes to college.</small>
+              <hr class="invisible compact">
+            </div>
+            <div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
+              <form class="calc-form fs-row">
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="savings">Savings Amount</label>
+                  <input type="number" name="savings" id="savings" value="15000" step="500">
+                </div>
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="loans">Loan Amount</label>
+                  <input type="number" name="loans" id="loans" value="30000" step="500">
+                </div>
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="scholarship">Scholarships + Grant Amount</label>
+                  <input type="number" name="scholarship" id="scholarship" value="25000" step="500">
+                </div>
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="total">Total</label>
+                  <div class="input" id="total">Number</div>
+                </div>
+                <div class="calc-form-field fs-cell fs-all-full">
+                  <hr class="invisible compact">
+                  <p>Learn about other ways to pay for college.</p>
+                  <a class="button small full" href="payingforcollege.html">Paying for College</a>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,7 +183,10 @@
 
     window.onload = function() {
 
-      var ctx = document.getElementById("canvas").getContext("2d");;
+      var ctx = document.getElementById("canvas");
+
+      ctx.height = 200;
+
       var savings = $('#savings').val();
       var loans = $('#loans').val();
       var scholarships = $('#scholarship').val();
@@ -219,14 +259,24 @@
         }
       });
     };
+    var savings = parseInt($('#savings').val());
+    var loans = parseInt($('#loans').val());
+    var scholarships = parseInt($('#scholarship').val());
+    var total = savings + loans + scholarships;
+    $('#total').html(total);
+    $('#savings-desc').html(savings);
+
+    $('.calc-form-field input').change(function() {
+      var savings = parseInt($('#savings').val());
+      var loans = parseInt($('#loans').val());
+      var scholarships = parseInt($('#scholarship').val());
+      var total = savings + loans + scholarships;
+      $('#total').html(total);
+      $('#savings-desc').html(savings);
+      myBar.update();
+    });
   });
-  $('.calc input').change(function() {
-  //$('.calc input').on('change',function(){
-    var savings = $('#savings').val();
-    var loans = $('#loans').val();
-    var scholarships = $('#scholarship').val();
-    myBar.update();
-  })
+
 </script>
 
 <!-- @include parts/footerspacer.kit -->

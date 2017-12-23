@@ -105,6 +105,15 @@
       @media @desktop {
         .font_size(16);
       }
+      a {
+        color: @purple;
+        text-decoration: none;
+        &:before, &:after {
+          position: relative;
+          top: .225em;
+          margin-left: 5px;
+        }
+      }
     }
 
     ul {

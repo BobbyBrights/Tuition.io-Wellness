@@ -17,12 +17,12 @@
 <div id="wrapper">
   <div id="nav" class="nav sticky">
     <div class="fs-row">
-      <div class="fs-cell fs-lg-8 fs-md-half fs-sm-half">
-        <a href="index.html" class="nav-button-logo"><img src="assets/chegg.png" class="nav-button-logo"></a>
-        <a href="index.html" class="nav-button nav-button--em fs-md-hide fs-sm-hide">powered by tuition.io</a>
+      <div class="fs-cell fs-lg-9 fs-md-half fs-sm-half">
+        <a href="index.html" class="nav-button-logo"><img src="assets/chegg.png" alt="" class="nav-button-logo"></a>
+        <a href="index.html" class="nav-button nav-button--em fs-md-hide fs-sm-hide">Student Loan Repayment Benefit powered by tuition.io</a>
       </div>
-      <div class="fs-cell fs-lg-4 fs-md-half fs-sm-half text-right nav-button-wrapper">
-        <a href="#" class="nav-button nav-button--em fs-md-hide fs-lg-hide">powered by tuition.io</a>
+      <div class="fs-cell fs-lg-3 fs-md-half fs-sm-half text-right nav-button-wrapper">
+        <a href="#" class="nav-button nav-button--powered nav-button--em fs-md-hide fs-lg-hide">Student Loan Repayment Benefit powered by tuition.io</a>
         <a href="#" class="nav-button nav-button--em fs-sm-hide">Hello, Alex</a>
         <a href="#" class="nav-button nav-button-signout  fs-sm-hide">Sign Out</a>
       </div>
@@ -39,22 +39,11 @@
       </div>
     </div>
   </div>
-  <!--
-  <div id="nav-overlay">
-    <div id="nav-overlay-centered">
-      <ul class="menu">
-        <li class="menu-item"><a href="payingforcollege.html">Paying for College</a></li>
-        <li class="menu-item"><a href="refinancing.html">Refinancing</a></li>
-        <li class="menu-item"><a href="askjeni.html">Ask Jeni</a></li>
-        <li class="menu-item"><a href="collegecostcalc.html">College Cost Calculator</a></li>
-      </ul>
-      <ul class="menu-sub">
-        <li class="menu-sub-item"><a href="#" class="nav-button nav-button--em">Hello, Alex</a></li>
-        <li class="menu-sub-item"><a href="#" class="nav-button">Sign Out</a></li>
-      </ul>
-    </div>
+  <div id="nav-mobile">
+    <a href="employercontribution.html" class="fs-cell fs-all-third"><span class="nav-button first">Overview</span></a>
+    <a href="myloans.html" class="fs-cell fs-all-third text-center"><span class="nav-button">My Loans</span></a>
+    <a href="index.html" class="fs-cell fs-all-third text-right"><span class="nav-button last">Student Loans 101</span></a>
   </div>
-  -->
 
 <div class="page-header simple">
   <div class="fs-row">
@@ -69,7 +58,8 @@
   <div class="fs-cell fs-all-full">
     <div class="page-content">
       <div class="carousel carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
-        <div class="carousel-slide">
+        <div class="carousel-slide  calc-slide">
+          <h2 class="calc-title nomargin">Start Here</h2>
           <form class="calc-form">
             <div class="calc-item">
               <div class="fs-row">
@@ -185,12 +175,48 @@
               </div>
               <p class="calc-item-desc">Most students attend college between 2-6 years.</p>
             </div>
-            <a href="#" class="button button-cta small">Calculate</a>
+            <a href="#" class="button button-cta small" onClick='$(".carousel").carousel("jump", 2);'>Calculate</a>
           </form>
         </div>
-        <div class="carousel-slide">
-          <hr class="invisible">
-          <canvas id="canvas"></canvas>
+        <div class="carousel-slide calc-slide">
+          <a href="#" class="calc-back" onClick='$(".carousel").carousel("jump", 1);'><img src="assets/x-circle.svg" alt="back"></a>
+          <div class="fs-row">
+            <div class="fs-cell fs-all-full">
+              <h2 class="calc-title">Estimated Cost of College</h2>
+            </div>
+            <div class="fs-cell fs-lg-8 fs-md-full fs-sm-full text-center">
+              <canvas id="canvas"></canvas>
+              <hr class="invisible compact">
+              <small>If you want to pay $<span id="savings-desc">#</span> from your savings, you’ll need to save $<span id="calc-desc">$$$</span> 
+              <br>per month until your child goes to college.</small>
+              <hr class="invisible compact">
+            </div>
+            <div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
+              <form class="calc-form fs-row">
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="savings">Savings Amount</label>
+                  <input type="number" name="savings" id="savings" value="15000" step="500">
+                </div>
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="loans">Loan Amount</label>
+                  <input type="number" name="loans" id="loans" value="30000" step="500">
+                </div>
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="scholarship">Scholarships + Grant Amount</label>
+                  <input type="number" name="scholarship" id="scholarship" value="25000" step="500">
+                </div>
+                <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
+                  <label for="total">Total</label>
+                  <div class="input" id="total">Number</div>
+                </div>
+                <div class="calc-form-field fs-cell fs-all-full">
+                  <hr class="invisible compact">
+                  <p>Learn about other ways to pay for college.</p>
+                  <a class="button small full" href="payingforcollege.html">Paying for College</a>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -202,7 +228,10 @@
 
     window.onload = function() {
 
-      var ctx = document.getElementById("canvas").getContext("2d");;
+      var ctx = document.getElementById("canvas");
+
+      ctx.height = 200;
+
       var savings = $('#savings').val();
       var loans = $('#loans').val();
       var scholarships = $('#scholarship').val();
@@ -275,14 +304,24 @@
         }
       });
     };
+    var savings = parseInt($('#savings').val());
+    var loans = parseInt($('#loans').val());
+    var scholarships = parseInt($('#scholarship').val());
+    var total = savings + loans + scholarships;
+    $('#total').html(total);
+    $('#savings-desc').html(savings);
+
+    $('.calc-form-field input').change(function() {
+      var savings = parseInt($('#savings').val());
+      var loans = parseInt($('#loans').val());
+      var scholarships = parseInt($('#scholarship').val());
+      var total = savings + loans + scholarships;
+      $('#total').html(total);
+      $('#savings-desc').html(savings);
+      myBar.update();
+    });
   });
-  $('.calc input').change(function() {
-  //$('.calc input').on('change',function(){
-    var savings = $('#savings').val();
-    var loans = $('#loans').val();
-    var scholarships = $('#scholarship').val();
-    myBar.update();
-  })
+
 </script>
 
 <hr class="invisible">
