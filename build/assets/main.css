@@ -7790,13 +7790,23 @@ html.fs-swap-active {
 .optimizer .optimizer-pagination {
   background-color: #50278C;
 }
-.optimizer .optimizer-pagination .tab {
-  color: rgba(255, 255, 255, 0.25);
+.optimizer .optimizer-pagination:before {
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: transparent;
 }
-.optimizer .optimizer-pagination .tab:hover,
-.optimizer .optimizer-pagination .tab.fs-tabs-active {
+.optimizer .optimizer-pagination li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.optimizer .optimizer-pagination li.fs-carousel-active a {
   color: #fff;
-  border-bottom: 0;
+  font-weight: bold;
 }
 .optimizer .optimizer-slide {
   background-color: #fff;

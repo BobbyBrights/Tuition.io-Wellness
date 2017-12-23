@@ -5,15 +5,33 @@
   }
 
   & &-pagination {
+    &:before {
+      content: '';
+      display: block;
+      .cover();
+      z-index: 99;
+      background-color: transparent;
+    }
     //margin-bottom: 10px;
-    background-color: @purple;
-    .tab {
-      color: @white25;
-      &:hover, &.fs-tabs-active {
-        color: @white;
-        border-bottom: 0;
+    li {
+      a {
+        color: @white50;
+      }
+      &.fs-carousel-active {
+        a {
+          color: @white;
+          font-weight: bold;
+        }
       }
     }
+    background-color: @purple;
+    //.tab {
+    //  color: @white25;
+    //  &:hover, &.fs-tabs-active {
+    //    color: @white;
+    //    border-bottom: 0;
+    //  }
+    //}
   }
 
   & &-slide {
