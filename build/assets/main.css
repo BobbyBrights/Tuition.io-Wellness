@@ -7838,15 +7838,19 @@ html.fs-swap-active {
   text-align: center;
 }
 .optimizer .optimizer-btn {
-  width: auto;
+  width: auto!Important;
   margin: 0 5px;
 }
 @media screen and (min-width: 300px) {
   .optimizer .optimizer-btn {
-    width: auto;
+    width: auto!Important;
   }
 }
 @media screen and (min-width: 740px) {
+}
+.optimizer .optimizer-btn.inactive {
+  background-color: #CBCBD2;
+  pointer-events: none;
 }
 .optimizer .opt-options__item {
   padding: 50px;

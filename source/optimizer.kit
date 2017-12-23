@@ -35,49 +35,51 @@
     <div class="fs-cell fs-all-full">
       <div class="optimizer-wrappre">
         <ul class="optimizer-pagination text-center">
-          <li class="page-nav-menu-item"><a class="tab" href="#opt-1" data-tabs-group="tab-opt" data-tabs-active="true">Get Started</a></li>
-          <li class="page-nav-menu-item"><a class="tab" href="#opt-2" data-tabs-group="tab-opt">Financial Health</a></li>
-          <li class="page-nav-menu-item"><a class="tab" href="#opt-3" data-tabs-group="tab-opt">About You</a></li>
-          <li class="page-nav-menu-item"><a class="tab" href="#opt-4" data-tabs-group="tab-opt">Optimizations</a></li>
-          <li class="page-nav-menu-item"><a class="tab" href="#opt-5" data-tabs-group="tab-opt">Action Plan</a></li>
+          <li class="page-nav-menu-item"><a href="#" data-tabs-group="tab-opt" data-tabs-active="true">Get Started</a></li>
+          <li class="page-nav-menu-item"><a href="#" data-tabs-group="tab-opt">Financial Health</a></li>
+          <li class="page-nav-menu-item"><a href="#" data-tabs-group="tab-opt">About You</a></li>
+          <li class="page-nav-menu-item"><a href="#" data-tabs-group="tab-opt">Optimizations</a></li>
+          <li class="page-nav-menu-item"><a href="#" data-tabs-group="tab-opt">Action Plan</a></li>
         </ul>
-        <div id="opt-1" class="optimizer-slide">
-          <h3 class="optimizer-title"><!-- $slide_1_title --></h3>
-          <div class="optimizer-content"><!-- @include parts/opt_slide1.kit --></div>
-          <div class="optimizer-buttons">
-            <a href="#opt-2" class="tab button button-cta small optimizer-btn" data-tabs-group="tab-opt">Start Saving</a>
+        <div class="carousel carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
+          <div id="opt-1" class="optimizer-slide">
+            <h3 class="optimizer-title"><!-- $slide_1_title --></h3>
+            <div class="optimizer-content"><!-- @include parts/opt_slide1.kit --></div>
+            <div class="optimizer-buttons">
+              <a href="#opt-2" class="button small optimizer-btn" onClick='$(".carousel").carousel("jump", 2);'>Start Saving</a>
+            </div>
           </div>
-        </div>
-        <div id="opt-2" class="optimizer-slide">
-          <h3 class="optimizer-title"><!-- $slide_2_title --></h3>
-          <div class="optimizer-content"><!-- @include parts/opt_slide2.kit --></div>
-          <div class="optimizer-buttons">
-            <a href="#opt-1" class="tab button button-secondary small optimizer-btn ss-gizmo left" data-tabs-group="tab-opt">Back</a>
-            <a href="#opt-3" class="tab button button-cta small optimizer-btn inactive" data-tabs-group="tab-opt">Next Step</a>
+          <div id="opt-2" class="optimizer-slide">
+            <h3 class="optimizer-title"><!-- $slide_2_title --></h3>
+            <div class="optimizer-content"><!-- @include parts/opt_slide2.kit --></div>
+            <div class="optimizer-buttons">
+              <a href="#" class="button button-secondary small optimizer-btn ss-gizmo left" onClick='$(".carousel").carousel("jump", 1);'>Back</a>
+              <a href="#" class="button small optimizer-btn inactive" onClick='$(".carousel").carousel("jump", 3);'>Next Step</a>
+            </div>
           </div>
-        </div>
-        <div id="opt-3" class="optimizer-slide">
-          <h3 class="optimizer-title"><!-- $slide_3_title --></h3>
-          <div class="optimizer-content"><!-- @include parts/opt_slide3.kit --></div>
-          <div class="optimizer-buttons">
-            <a href="#opt-2" class="tab button button-secondary small optimizer-btn ss-gizmo left" data-tabs-group="tab-opt">Back</a>
-            <a href="#opt-4" class="tab button button-cta small optimizer-btn inactive" data-tabs-group="tab-opt">Next Step</a>
+          <div id="opt-3" class="optimizer-slide">
+            <h3 class="optimizer-title"><!-- $slide_3_title --></h3>
+            <div class="optimizer-content"><!-- @include parts/opt_slide3.kit --></div>
+            <div class="optimizer-buttons">
+              <a href="#" class="button button-secondary small optimizer-btn ss-gizmo left" onClick='$(".carousel").carousel("jump", 2);'>Back</a>
+              <a href="#" class="button small optimizer-btn inactive" onClick='$(".carousel").carousel("jump", 4);'>Next Step</a>
+            </div>
           </div>
-        </div>
-        <div id="opt-4" class="optimizer-slide">
-          <h3 class="optimizer-title"><!-- $slide_4_title --></h3>
-          <div class="optimizer-content"><!-- @include parts/opt_slide4.kit --></div>
-          <div class="optimizer-buttons">
-            <a href="#opt-3" class="tab button button-secondary small optimizer-btn ss-gizmo left" data-tabs-group="tab-opt">Back</a>
-            <a href="#opt-5" class="tab button button-cta small optimizer-btn inactive" data-tabs-group="tab-opt">Next Step</a>
+          <div id="opt-4" class="optimizer-slide">
+            <h3 class="optimizer-title"><!-- $slide_4_title --></h3>
+            <div class="optimizer-content"><!-- @include parts/opt_slide4.kit --></div>
+            <div class="optimizer-buttons">
+              <a href="#" class="button button-secondary small optimizer-btn ss-gizmo left" onClick='$(".carousel").carousel("jump", 3);'>Back</a>
+              <a href="#" class="button small optimizer-btn inactive" onClick='$(".carousel").carousel("jump", 5);'>Next Step</a>
+            </div>
           </div>
-        </div>
-        <div id="opt-4" class="optimizer-slide">
-          <h3 class="optimizer-title"><!-- $slide_4_title --></h3>
-          <div class="optimizer-content"><!-- @include parts/opt_slide4.kit --></div>
-          <div class="optimizer-buttons">
-            <a href="#opt-3" class="tab button button-secondary small optimizer-btn ss-gizmo left" data-tabs-group="tab-opt">Back</a>
-            <a href="#opt-5" class="button button-cta small optimizer-btn inactive" data-tabs-group="tab-opt">Next Step</a>
+          <div id="opt-5" class="optimizer-slide">
+            <h3 class="optimizer-title"><!-- $slide_4_title --></h3>
+            <div class="optimizer-content"><!-- @include parts/opt_slide4.kit --></div>
+            <div class="optimizer-buttons">
+              <a href="#" class="button button-secondary small optimizer-btn ss-gizmo left" onClick='$(".carousel").carousel("jump", 4);'>Back</a>
+              <a href="#" class="button small optimizer-btn inactive" onClick='$(".carousel").carousel("jump", 3);'>Next Step</a>
+            </div>
           </div>
         </div>
       </div>

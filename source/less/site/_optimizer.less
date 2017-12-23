@@ -55,13 +55,17 @@
   & &-btn {
     @media @min {
       //width: 100%;  
-      width: auto;
+      width: auto!Important;
     }
     @media @tablet {
       //width: 50%;  
     }
-    width: auto;
+    width: auto!Important;
     margin: 0 5px;
+    &.inactive {
+      background-color: @lightGray;
+      pointer-events: none;
+    }
     //margin-top: @spaced;
   }
 
