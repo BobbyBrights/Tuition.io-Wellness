@@ -12,7 +12,7 @@
 <div class="fs-row">
   <div class="fs-cell fs-all-full">
     <div class="page-content">
-      <div class="carousel carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
+      <div class="carousels carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
         <div class="carousel-slide  calc-slide">
           <h2 class="calc-title nomargin">Start Here</h2>
           <form class="calc-form">
@@ -141,10 +141,14 @@
             </div>
             <div class="fs-cell fs-lg-8 fs-md-full fs-sm-full text-center">
               <canvas id="canvas"></canvas>
-              <hr class="invisible compact">
               <small>If you want to pay $<span id="savings-desc">#</span> from your savings, you’ll need to save $<span id="calc-desc">$$$</span> 
               <br>per month until your child goes to college.</small>
-              <hr class="invisible compact">
+              <div class="fs-row">
+                <span class="fs-cell fs-all-fourth text-center">Savings Amount</span>
+                <span class="fs-cell fs-all-fourth text-center">Loan Amount</span>
+                <span class="fs-cell fs-all-fourth text-center">Scholarships + Grant Amounts</span>
+                <span class="fs-cell fs-all-fourth text-center">Paying for College</span>
+              </div>
             </div>
             <div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
               <form class="calc-form fs-row">
@@ -172,6 +176,8 @@
               </form>
             </div>
           </div>
+          <hr class="divider compact">
+          <p class="small">College costs are always changing. This calculator is just a guideline. Always consult with a financial advisor and the college to determine actual costs. Assumptions: 5% college cost inflation rate; 8% growth rate on savings investment.</p>
         </div>
       </div>
     </div>
@@ -197,7 +203,7 @@
       window.myBar = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ["Savings", "Loans", "Scholarships + Grants", "Total"],
+          labels: ["", "", "", ""],
           datasets: [{
             //label: '# of Votes',
             data: [savings, loans, scholarships, ''],

@@ -6632,6 +6632,16 @@ form input[type=url]:focus,
 form textarea:focus {
   box-shadow: 0 0 0 1px #979797;
 }
+form input[type=text].error,
+form input[type=email].error,
+form input[type=password].error,
+form input[type=number].error,
+form input[type=tel].error,
+form input[type=url].error,
+form textarea.error {
+  box-shadow: 0 0 0 1px red;
+  background-color: #fff0f0;
+}
 .input-percent {
   background: url('/wp-content/themes/tuition.io/assets/img/percent.svg') center right 10px no-repeat;
   background-size: auto 40%;
@@ -6767,6 +6777,10 @@ html.fs-swap-active {
 }
 #back-to-top.show {
   opacity: 1;
+}
+.small {
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 .nav {
   background-color: #fff;
@@ -6938,7 +6952,7 @@ html.fs-swap-active {
   background-color: #fff;
   border-bottom: 1px solid #F1F1F1;
   position: relative;
-  z-index: 4;
+  z-index: 10;
 }
 @media screen and (min-width: 300px) {
   #nav-sub {
@@ -6949,6 +6963,35 @@ html.fs-swap-active {
   #nav-sub {
     display: block;
   }
+}
+#nav-sub-drawer {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+}
+#nav-sub-drawer-wrapper {
+  background-color: #50278C;
+  padding: 10px 25px;
+  text-align: right;
+  float: right;
+  color: #fff;
+  border-radius: 4px 0px 4px 4px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+#nav-sub-drawer a {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 50px;
+  line-height: 50px;
+  color: inherit;
+  text-decoration: none;
+}
+#nav-sub-drawer a:hover {
+  border-bottom: 1px solid #fff;
+}
+#nav-sub-drawer a:last-child {
+  border-bottom: 0;
 }
 #nav-overlay {
   height: 100%;
@@ -7048,6 +7091,15 @@ html.fs-swap-active {
 }
 .fs-lightbox-inline {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15) !important;
+}
+.sub-child {
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease;
+}
+.sub-parent:hover .sub-child {
+  visibility: visible;
+  opacity: 1;
 }
 .page {
   padding-top: 50px;
