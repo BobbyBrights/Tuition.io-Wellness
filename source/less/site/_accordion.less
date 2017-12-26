@@ -12,18 +12,18 @@
     @media @min {
       padding: 15px;
       padding-left: 50px;
-      padding-right: 50px;
+      //padding-right: 50px;
     }
 
     @media @tablet {
       padding: @spaced;
       padding-left: 100px;
-      padding-right: 150px;
+      //padding-right: 150px;
     }
 
     @media @desktop {
       padding-left: 100px;
-      padding-right: 150px;
+      //padding-right: 150px;
     }
 
     small {
@@ -62,6 +62,7 @@
 
     &-title {
       color: @gray;
+      position: relative;
       @media @min {
         .font_size(15);
       }
@@ -88,6 +89,11 @@
           .font_size(18);
           margin-left: 8px
         }
+      }
+      &:before, &:after {
+        position: absolute;
+        right: 0;
+        top: .25em;
       }
     }
     
