@@ -6778,9 +6778,36 @@ html.fs-swap-active {
 #back-to-top.show {
   opacity: 1;
 }
-.small {
+p.small {
   font-size: 12px;
   font-size: 0.75rem;
+}
+.refinance-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #50278C;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 25px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 500ms ease;
+  opacity: 0;
+  transform: translateY(15px);
+}
+.refinance-btn:hover {
+  background-color: #391c64;
+}
+.refinance-btn.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .nav {
   background-color: #fff;
@@ -8204,6 +8231,13 @@ html.fs-swap-active {
   margin-left: -5px;
   border-width: 5px 5px 0;
   border-top-color: #000;
+}
+.calc-labels {
+  font-size: 10px;
+  font-size: 0.625rem;
+}
+.calc-labels a {
+  text-decoration: none;
 }
 .calc-slide {
   background-color: #fff;

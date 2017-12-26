@@ -103,19 +103,24 @@
   </div>
 </div>
 
+<a href="#credible" class="refinance-btn">Ready to Refinance?</a>
+
 <script>
-    //$(window).on('open.lightbox', function(){
-    //  setTimeout(function(){
-    //    CredibleClient.init('#credible-div', {
-    //      environment: '{{ $credibleEnv }}',
-    //      scrollTopPad: 50
-    //    });
-    //  }, 1000);
-    //});
-    CredibleClient.init('#credible-div', {
-      environment: '{{ $credibleEnv }}',
-      scrollTopPad: 50
+    $(window).on('open.lightbox', function(){
+      setTimeout(function(){
+        CredibleClient.init('#credible-div', {
+          environment: '{{ $credibleEnv }}',
+          scrollTopPad: 50
+        });
+      }, 500);
     });
+    $refinance = $('.refinance-btn');
+    setTimeout(function(){
+      $refinance.addClass('active');
+    },1000);
+    $refinance.on('click', function(){
+      $(this).removeClass('active');
+    })
 </script>
 
 

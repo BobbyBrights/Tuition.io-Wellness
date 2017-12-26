@@ -93,6 +93,34 @@ body,html {
     opacity: 1;
 }
 
-.small {
+p.small {
   .font_size(12);
+}
+
+.refinance-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: @purple;
+  color: @white;
+  font-weight: bold;
+  padding: 0 @spaced;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 500ms ease;
+  opacity: 0;
+  transform: translateY(15px);
+  &:hover {
+    background-color: darken(@purple, 10%)
+  }
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
