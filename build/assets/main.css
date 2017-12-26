@@ -8239,6 +8239,10 @@ p.small {
 .calc-labels a {
   text-decoration: none;
 }
+.calc-labels a:hover {
+  color: #50278C;
+  border-bottom: 1px solid;
+}
 .calc-slide {
   background-color: #fff;
 }
@@ -8252,7 +8256,6 @@ p.small {
   font-size: 1.75rem;
   color: #50278C;
   font-weight: bold;
-  margin-bottom: 25px;
 }
 .calc-form {
   padding: 2px;

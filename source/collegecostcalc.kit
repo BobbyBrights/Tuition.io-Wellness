@@ -138,6 +138,11 @@
           <div class="fs-row">
             <div class="fs-cell fs-all-full">
               <h2 class="calc-title">Estimated Cost of College</h2>
+              <p>
+                Some families choose to split the cost of college between Savings, Loans, and Scholarships.<br>
+                Use this calculator to see what could work for you.
+              </p>
+              <hr class="invisible">
             </div>
             <div class="fs-cell fs-lg-8 fs-md-full fs-sm-full text-center">
               <canvas id="canvas"></canvas>
@@ -159,19 +164,19 @@
               <form class="calc-form fs-row">
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="savings">Savings Amount</label>
-                  <input type="number" name="savings" id="savings" value="15000" step="500">
+                  <input type="number" name="savings" id="savings" step="500">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="loans">Loan Amount</label>
-                  <input type="number" name="loans" id="loans" value="30000" step="500">
+                  <input type="number" name="loans" id="loans" step="500">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="scholarship">Scholarships + Grant Amount</label>
-                  <input type="number" name="scholarship" id="scholarship" value="25000" step="500">
+                  <input type="number" name="scholarship" id="scholarship" step="500">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="total">Total</label>
-                  <div class="input" id="total">Number</div>
+                  <div class="input" id="total"></div>
                 </div>
                 <div class="calc-form-field fs-cell fs-all-full">
                   <hr class="invisible compact">
@@ -192,6 +197,11 @@
 <script>
   $(document).ready(function(){
 
+    var costofcollege = 70000;
+    $('#savings').val(costofcollege*.333);
+    $('#loans').val(costofcollege*.333);
+    $('#scholarship').val(costofcollege*.333);
+
     window.onload = function() {
 
       var ctx = document.getElementById("canvas");
@@ -201,9 +211,7 @@
       var savings = $('#savings').val();
       var loans = $('#loans').val();
       var scholarships = $('#scholarship').val();
-      //var total = [savings + loans + scholarships]
       var total = [savings + loans + scholarships]
-      //var totals = 50000
 
       window.myBar = new Chart(ctx, {
         type: 'bar',
@@ -216,7 +224,7 @@
               '#7CDFC2',
               '#50A1B9',
               '#562997',
-              'rgba(75, 192, 192, 0.2)',
+              '',
            ],
           },
           {
@@ -226,7 +234,7 @@
               '#7CDFC2',
               '#50A1B9',
               '#562997',
-              '7CDFC2',
+              '#7CDFC2',
            ],
           },
           {
@@ -236,7 +244,7 @@
               '#7CDFC2',
               '#50A1B9',
               '#562997',
-              '50A1B9',
+              '#50A1B9',
            ],
           },
           {
@@ -246,7 +254,7 @@
               '#7CDFC2',
               '#50A1B9',
               '#562997',
-              '562997',
+              '#562997',
            ],
           }]
         },
@@ -274,7 +282,9 @@
     var loans = parseInt($('#loans').val());
     var scholarships = parseInt($('#scholarship').val());
     var total = savings + loans + scholarships;
-    $('#total').html(total);
+
+    $('#total').html(total);  
+    
     $('#savings-desc').html(savings);
 
     $('.calc-form-field input').change(function() {
