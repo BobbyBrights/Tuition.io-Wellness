@@ -8236,6 +8236,19 @@ p.small {
   border-width: 5px 5px 0;
   border-top-color: #000;
 }
+.calc-disc {
+  text-align: center;
+  font-size: 22px;
+  font-size: 1.375rem;
+  margin: 25px 0;
+  padding: 22.5px 0 25px;
+  border-radius: 2px;
+  color: #50278C;
+  border: 1px solid #50278C;
+}
+.calc-disc * {
+  color: inherit;
+}
 .calc-strip {
   background-color: #50278C;
   border-radius: 2px;
