@@ -7124,6 +7124,11 @@ p.small {
   opacity: 0;
   transition: 300ms ease;
 }
+.sub-child-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}
 .sub-parent:hover .sub-child {
   visibility: visible;
   opacity: 1;
