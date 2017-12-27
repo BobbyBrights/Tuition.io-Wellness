@@ -19,18 +19,18 @@
           </div>
           <hr class="invisible">
           <div class="coffee-slider fs-cell fs-lg-10 fs-md-4 fs-sm-3 fs-contained fs-all-justify-center">
-            <input  data-slider-id='ex1Slider' type="range" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="5" name="contribution" id="contribution"/>
+            <input data-slider-id='ex1Slider' type="range" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="5" name="contribution" id="contribution"/>
           </div>
           <hr class="invisible">
           <div class="coffee-calculator text-center">
             <span class="coffee-qty coffee-var">5</span> coffees per week x 
-            <span class="coffee-cost coffee-var">$3.50</span> per coffee =
-            <span class="coffee-result coffee-var">$910</span> per year
+            $<span class="coffee-cost coffee-var">3.50</span> per coffee =
+            $<span class="coffee-result coffee-var">910</span> per year
           </div>
           <hr class="invisible compact">
           <div class="coffee-calculator text-center">
             <div>Pay off <span class="coffee-early coffee-var">6</span> months early</div>
-            <div>Save <span class="coffee-interest coffee-var">$89</span> on interest</div>
+            <div>Save $<span class="coffee-interest coffee-var">89</span> on interest</div>
           </div>
         </div>
       </div>
@@ -45,6 +45,14 @@
       formatter: function(value) {
         return value;
       }
+    });
+
+    $("#contribution").slider().on('slide',function(){
+      coffees = mySlider.slider('getValue');
+      coffeecost = parseInt($('.coffee-cost').html());
+      results = (coffees*coffeecost)*52;
+      $('.coffee-qty').html(coffees)
+      $('.coffee-result').html(results)
     });
   });
 </script>
