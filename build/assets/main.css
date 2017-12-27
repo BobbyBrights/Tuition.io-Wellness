@@ -8296,6 +8296,9 @@ p.small {
     margin: 0;
   }
 }
+.calc-input-savings {
+  color: #94DCC3;
+}
 .calc-item {
   border-bottom: 1px solid #F1F1F1;
 }

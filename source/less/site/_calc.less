@@ -23,6 +23,7 @@
     font-weight: bold;
     //margin-bottom: @spaced;
   }
+
   &-form {
     &-field {
       input, .input {
@@ -38,6 +39,14 @@
         background: url('dollar-sign.svg') left center no-repeat;
         background-size: auto 50% ;
         padding-left: @spaced*1.05!important;
+        &.calc-input {
+          &-savings {
+            //color: #7DF3C3;
+          }
+          &-loans {
+            //color: @teal
+          }
+        }
       }
     }
     padding: 2px;
@@ -54,6 +63,11 @@
       @media @desktop {
         margin: 0
       }
+    }
+  }
+  &-input {
+    &-savings {
+      color: #94DCC3;
     }
   }
   &-item {

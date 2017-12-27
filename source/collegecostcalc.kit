@@ -12,7 +12,7 @@
 <div class="fs-row">
   <div class="fs-cell fs-all-full">
     <div class="page-content">
-      <div class="carousel carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
+      <div class="carousels carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
         <div class="carousel-slide  calc-slide">
           <h2 class="calc-title nomargin">Start Here</h2>
           <form class="calc-form">
@@ -146,10 +146,8 @@
             </div>
             <div class="fs-cell fs-lg-8 fs-md-full fs-sm-full text-center">
               <canvas id="canvas"></canvas>
-              <small>If you want to pay $<span id="savings-desc">#</span> from your savings, you’ll need to save $<span id="calc-desc">$$$</span> 
-              <br>per month until your child goes to college.</small>
-              <div class="fs-row calc-labels">
-                <hr class="divider compact fs-cell fs-all-full">
+              <!--
+              <div class="fs-row calc-labels hidden">
                 <div class="fs-cell fs-lg-11 fs-lg-push-1">
                   <div class="fs-row">
                     <div class="fs-cell fs-all-fourth fs-contained text-center"><a href="">Savings Amount</a></div>
@@ -158,24 +156,28 @@
                     <div class="fs-cell fs-all-fourth fs-contained text-center"><a href="">Paying for College</a></div>
                   </div>
                 </div>
+                <hr class="divider compact fs-cell fs-all-full">
               </div>
+              -->
+              <small>If you want to pay $<span id="savings-desc">#</span> from your savings, you’ll need to save $<span id="calc-desc">$$$</span> 
+              <br>per month until your child goes to college.</small>
             </div>
             <div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
               <form class="calc-form fs-row">
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="savings">Savings Amount</label>
-                  <input type="number" name="savings" id="savings" step="500">
+                  <input type="number" name="savings" id="savings" step="500" class="calc-input-savings">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="loans">Loan Amount</label>
-                  <input type="number" name="loans" id="loans" step="500">
+                  <input type="number" name="loans" id="loans" step="500"  class="calc-input-loans">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="scholarship">Scholarships + Grant Amount</label>
-                  <input type="number" name="scholarship" id="scholarship" step="500">
+                  <input type="number" name="scholarship" id="scholarship" step="500" class="calc-input-grants">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
-                  <label for="total">Total</label>
+                  <label for="total">Total</label class="calc-input-savings">
                   <div class="input" id="total"></div>
                 </div>
                 <div class="calc-form-field fs-cell fs-all-full">
@@ -196,108 +198,110 @@
 
 <script>
   $(document).ready(function(){
+    var ctx = document.getElementById("canvas");
+        ctx.height = 200; 
 
     var costofcollege = 70000;
-    $('#savings').val(costofcollege*.333);
+    $('#savings').val(costofcollege*.334);
     $('#loans').val(costofcollege*.333);
     $('#scholarship').val(costofcollege*.333);
 
-    window.onload = function() {
-
-      var ctx = document.getElementById("canvas");
-
-      ctx.height = 200;
-
-      var savings = $('#savings').val();
-      var loans = $('#loans').val();
-      var scholarships = $('#scholarship').val();
-      var total = [savings + loans + scholarships]
-
-      window.myBar = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ["", "", "", ""],
-          datasets: [{
-            //label: '# of Votes',
-            data: [savings, loans, scholarships, ''],
-            backgroundColor: [
-              '#7CDFC2',
-              '#50A1B9',
-              '#562997',
-              '',
-           ],
-          },
-          {
-            //label: '# of Votes',
-            data: [ '','','', savings],
-            backgroundColor: [
-              '#7CDFC2',
-              '#50A1B9',
-              '#562997',
-              '#7CDFC2',
-           ],
-          },
-          {
-            //label: '# of Votes',
-            data: [ '','','', loans],
-            backgroundColor: [
-              '#7CDFC2',
-              '#50A1B9',
-              '#562997',
-              '#50A1B9',
-           ],
-          },
-          {
-            //label: '# of Votes',
-            data: [ '','','', scholarships],
-            backgroundColor: [
-              '#7CDFC2',
-              '#50A1B9',
-              '#562997',
-              '#562997',
-           ],
-          }]
-        },
-        options: {
-          legend: {
-            display: false
-          },
-          scales: {
-            xAxes: [{
-              stacked: true
-            }],
-            yAxes: [{
-              stacked: true,
-              ticks: {
-                callback: function(value, index, values) {
-                  return '$' + value;
-                }
-              }
-            }]
-          }
-        }
-      });
-    };
     var savings = parseInt($('#savings').val());
     var loans = parseInt($('#loans').val());
     var scholarships = parseInt($('#scholarship').val());
     var total = savings + loans + scholarships;
-
     $('#total').html(total);  
-    
-    $('#savings-desc').html(savings);
 
-    $('.calc-form-field input').change(function() {
+    var data = {
+      labels: ["Savings", "Loans", "Scholarship + Grants", "Paying for College"],
+      datasets: [
+        {
+          data: [savings, loans, scholarships, ''],
+          backgroundColor: [
+            '#50A1B9',
+            '#562997',
+            '#7CDFC2',
+            '',
+          ],
+        },
+        {
+          data: [ '','','', savings],
+          backgroundColor: [
+            '',
+            '',
+            '',
+            '#7CDFC2',
+          ],
+        },
+        {
+          data: [ '','','', loans],
+          backgroundColor: [
+            '',
+            '',
+            '',
+            '#562997',
+          ],
+        },
+        {
+          data: [ '','','', scholarships],
+          backgroundColor: [
+            '',
+            '',
+            '',
+            '#50A1B9',
+          ],
+        }
+      ]
+    };
+
+    function adddata(){
       var savings = parseInt($('#savings').val());
       var loans = parseInt($('#loans').val());
       var scholarships = parseInt($('#scholarship').val());
       var total = savings + loans + scholarships;
-      $('#total').html(total);
-      $('#savings-desc').html(savings);
+      myBar.data.datasets[0].data[0] = savings;
+      myBar.data.datasets[0].data[1] = loans;
+      myBar.data.datasets[0].data[2] = scholarships;
+      myBar.data.datasets[3].data[3] = savings;
+      myBar.data.datasets[2].data[3] = loans;
+      myBar.data.datasets[1].data[3] = scholarships;
       myBar.update();
-    });
-  });
+      console.log(myBar.data.datasets[0].data[3]);
+      $('#total').html(total);
+    }
 
+    var option = {
+      showLines: true,
+      responsive: true,
+      legend: {
+        display:false
+      },
+      scales: {
+        xAxes: [{
+          stacked: true
+        }],
+        yAxes: [{
+          stacked: true,
+          ticks: {
+            callback: function(value, index, values) {
+              return '$' + value;
+            }
+          }
+        }]
+      }
+    };
+
+    window.myBar = new Chart(ctx, {
+      data:data,
+      type: 'bar',
+      options:option
+    });
+
+    $('.calc-form-field input').change(function() {
+      adddata()
+    })
+
+  });
 </script>
 
 <!-- @include parts/footerspacer.kit -->
