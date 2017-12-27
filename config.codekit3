@@ -110,6 +110,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/source\/assets\/cons-1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/assets\/cons-1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/source\/assets\/cons-private-1.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -220,6 +230,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/source\/assets\/mail.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/assets\/mail.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/source\/assets\/menu.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -250,6 +270,26 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/source\/assets\/pros-1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/assets\/pros-1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/assets\/pros-2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/assets\/pros-2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/source\/assets\/pros-private-1.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -265,6 +305,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/build\/assets\/pros-private-2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/assets\/pros-private-3.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/assets\/pros-private-3.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
