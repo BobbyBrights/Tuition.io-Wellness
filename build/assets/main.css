@@ -7009,13 +7009,12 @@ p.small {
 #nav-sub-drawer a {
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  height: 50px;
-  line-height: 50px;
+  padding: 8px 0;
   color: inherit;
   text-decoration: none;
 }
 #nav-sub-drawer a:hover {
-  border-bottom: 1px solid #fff;
+  text-decoration: underline;
 }
 #nav-sub-drawer a:last-child {
   border-bottom: 0;
