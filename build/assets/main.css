@@ -8236,6 +8236,26 @@ p.small {
   border-width: 5px 5px 0;
   border-top-color: #000;
 }
+.calc-strip {
+  background-color: #50278C;
+  border-radius: 2px;
+  text-align: center;
+}
+.calc-strip span,
+.calc-strip a {
+  color: #fff;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.calc-strip span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.calc-strip a {
+  font-weight: bold;
+  padding: 25px 0;
+  display: block;
+  text-decoration: none;
+}
 .calc-labels {
   font-size: 10px;
   font-size: 0.625rem;
@@ -8264,6 +8284,15 @@ p.small {
 .calc-form {
   padding: 2px;
 }
+.calc-form-field {
+  margin-bottom: 15px;
+}
+.calc-form-field label a {
+  text-decoration: none;
+}
+.calc-form-field label a:hover {
+  color: #50278C;
+}
 .calc-form-field input,
 .calc-form-field .input {
   color: #50278C;
@@ -8278,6 +8307,18 @@ p.small {
   background: url('dollar-sign.svg') left center no-repeat;
   background-size: auto 50% ;
   padding-left: 26.25px !important;
+}
+.calc-form-field input.calc-input-savings,
+.calc-form-field .input.calc-input-savings {
+  color: #51A2BA;
+}
+.calc-form-field input.calc-input-loans,
+.calc-form-field .input.calc-input-loans {
+  color: #50278C;
+}
+.calc-form-field input.calc-input-grants,
+.calc-form-field .input.calc-input-grants {
+  color: #6ecfad;
 }
 .calc-form select {
   font-size: 13px;
@@ -8299,9 +8340,6 @@ p.small {
   .calc-form select {
     margin: 0;
   }
-}
-.calc-input-savings {
-  color: #94DCC3;
 }
 .calc-item {
   border-bottom: 1px solid #F1F1F1;

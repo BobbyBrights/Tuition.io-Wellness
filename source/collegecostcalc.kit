@@ -12,7 +12,7 @@
 <div class="fs-row">
   <div class="fs-cell fs-all-full">
     <div class="page-content">
-      <div class="carousel carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
+      <div class="carousels carousel_fade" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":false,"single":true}'>
         <div class="carousel-slide  calc-slide">
           <h2 class="calc-title nomargin">Start Here</h2>
           <form class="calc-form">
@@ -146,37 +146,38 @@
             </div>
             <div class="fs-cell fs-lg-8 fs-md-full fs-sm-full text-center">
               <canvas id="canvas"></canvas>
-              <small>If you want to pay $<span id="savings-desc">#</span> from your savings, you’ll need to save $<span id="calc-desc">$$$</span> 
-              <br>per month until your child goes to college.</small>
             </div>
             <div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
               <form class="calc-form fs-row">
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
-                  <label for="savings">Savings Amount</label>
+                  <label for="savings"><a href="">Savings Amount</a></label>
                   <input type="number" name="savings" id="savings" step="500" class="calc-input-savings">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
-                  <label for="loans">Loan Amount</label>
+                  <label for="loans"><a href="">Loan Amount</a></label>
                   <input type="number" name="loans" id="loans" step="500"  class="calc-input-loans">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
-                  <label for="scholarship">Scholarships + Grant Amount</label>
+                  <label for="scholarship"><a href="">Scholarships + Grant Amount</a></label>
                   <input type="number" name="scholarship" id="scholarship" step="500" class="calc-input-grants">
                 </div>
                 <div class="calc-form-field fs-cell fs-lg-full fs-md-full">
                   <label for="total">Total</label class="calc-input-savings">
                   <div class="input" id="total"></div>
                 </div>
-                <div class="calc-form-field fs-cell fs-all-full">
-                  <hr class="invisible compact">
-                  <p>Learn about other ways to pay for college.</p>
-                  <a class="button small full" href="payingforcollege.html">Paying for College</a>
-                </div>
               </form>
             </div>
           </div>
-          <hr class="divider compact">
-          <p class="small">College costs are always changing. This calculator is just a guideline. Always consult with a financial advisor and the college to determine actual costs. Assumptions: 5% college cost inflation rate; 8% growth rate on savings investment.</p>
+          <div class="calc-disc">
+            <hr class="divider compact">
+            <small>If you want to pay $<span id="savings-desc">#</span> from your savings, you’ll need to save $<span id="calc-desc">$$$</span> per month until your child goes to college.</small>
+            <hr class="invisible">
+          </div>
+          <div class="calc-strip">
+            <a class="" href="payingforcollege.html"><span>Learn about other ways to pay for college.</span> Paying for College</a>
+          </div>
+          <br>
+          <p class="small">College costs are always changing. This calculator is just a guideline. Always consult with a financial advisor and the college to determine actual costs. <br>Assumptions: 5% college cost inflation rate; 8% growth rate on savings investment.</p>
         </div>
       </div>
     </div>
@@ -186,7 +187,7 @@
 <script>
   $(document).ready(function(){
     var ctx = document.getElementById("canvas");
-        ctx.height = 200; 
+        ctx.height = 195; 
 
     var costofcollege = 70000;
     $('#savings').val(costofcollege*.334);
