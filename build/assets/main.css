@@ -7126,7 +7126,7 @@ p.small {
 }
 .sub-child-label {
   display: block;
-  color: rgba(255, 255, 255, 0.25);
+  color: #51A2BA;
   font-weight: bold;
 }
 .sub-parent:hover .sub-child {
