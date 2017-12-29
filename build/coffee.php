@@ -134,7 +134,7 @@
 
       $.ajax({
         type: 'POST',
-        url: 'lib/process.php',
+        url: 'lib/PayOffProjection.php',
         data: formData,
         dataType: 'json',
         encode: true,

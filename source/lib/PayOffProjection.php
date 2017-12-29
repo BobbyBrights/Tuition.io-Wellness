@@ -1,6 +1,6 @@
 <?php
 
-if ($_POST) {
+if ( ! empty($errors)) {
     $cups = int_val($_POST['contribution']);
 }
 

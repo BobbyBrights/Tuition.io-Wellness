@@ -8,7 +8,7 @@ $data           = array();      // array to pass back data
     // if any of these variables don't exist, add an error to our $errors array
 
     if (empty($_POST['contribution']))
-        $errors['contribution'] = 'Number is required.';
+        $errors['contribution'] = 'Name is required.';
 
 #    if (empty($_POST['email']))
 #        $errors['email'] = 'Email is required.';
