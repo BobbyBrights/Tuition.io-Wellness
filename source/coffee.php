@@ -125,8 +125,8 @@
       results = (coffees*coffeecost)*52;
       $('.coffee-qty').html(coffees);
       $('.coffee-result').html(results);
-      $('.coffee-early').html('<?php echo json_encode($interest_savings); ?>');
-      $('.coffee-interest').html('<?php echo json_encode($time_savings, JSON_FORCE_OBJECT) ?>');
+      $('.coffee-early').html(<?php echo json_encode($time_savings->format('%y years and %m months')) ?>);
+      $('.coffee-interest').html('<?php echo json_encode($interest_savings) ?>');
 
       var formData = {
         'contribution' : $('input[name=contribution]').val(),
@@ -139,7 +139,8 @@
         dataType: 'json',
         encode: true,
       }).done(function(data){
-        console.log(<?php echo json_encode($result) ?>);
+        console.log(<?php echo json_encode($time_savings->format('%y years and %m months')) ?>);
+        console.log(<?php echo json_encode($interest_savings) ?>);
       });
       
       e.preventDefault();

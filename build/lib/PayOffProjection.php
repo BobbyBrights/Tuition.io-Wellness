@@ -1,9 +1,9 @@
 <?php
 
-$cups = 7;
-$result = ($cups*3.5*52)/12;
-
 if ($_POST) {
+
+    $cups = $_POST['contribution'];
+    $result = ($cups*3.5*52)/12;
 
     $standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
     $extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
@@ -11,10 +11,10 @@ if ($_POST) {
     $interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
     $time_savings = $standard_payment['date']->diff($extra_payment['date']);
 
-    $results = array($interest_savings, $time_savings->format('%y years and %m months'));
-    echo json_encode($results);
-
 } else {
+
+    $cups = 7;
+    $result = ($cups*3.5*52)/12;
 
     $standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
     $extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
