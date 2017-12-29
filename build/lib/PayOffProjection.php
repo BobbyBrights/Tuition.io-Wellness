@@ -1,16 +1,32 @@
 <?php
 
+$errors     = array();
+$data       = array();
+$cups       = 6;
+
+if (empty($_POST['contribution']))
+    $errors['contribution'] = 'Number is required.';
 if ( ! empty($errors)) {
-    $cups = int_val($_POST['contribution']);
+    $data['success'] = false;
+    $data['errors']  = $errors;
+} else {
+    $data['success'] = true;
+    $data['message'] = 'Success!';
+    $cups            = $_POST['contribution'];
 }
 
-$cups = 5;
 $result = ($cups*3.5*52)/12;
 $standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
 $extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
 $interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
 $time_savings = $standard_payment['date']->diff($extra_payment['date']);
-$return = array('interest_savings' => $interest_savings, 'time_savings' => $time_savings->format('%y years and %m months'));
+
+$return = array(
+    'interest_savings'  => $interest_savings,
+    'time_savings'      => $time_savings->format("%y years and %m months")
+);
+
+echo json_encode($data);
 
 /**
  * PayoffProjection
