@@ -1,22 +1,27 @@
 <?php
 
+$cups = 7;
+$result = ($cups*3.5*52)/12;
+
 if ($_POST) {
-    $result['contribution'] = $_POST['contribution'];
-    echo json_encode($result);
-    die();
+
+    $standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
+    $extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
+
+    $interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
+    $time_savings = $standard_payment['date']->diff($extra_payment['date']);
+
+    $results = array($interest_savings, $time_savings->format('%y years and %m months'));
+    echo json_encode($results);
+
 } else {
-    $result['contribution'] = 0;
+
+    $standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
+    $extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
+    $interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
+    $time_savings = $standard_payment['date']->diff($extra_payment['date']);
+
 }
-
-#$coffee = $_COOKIE["height"];
-#$coffee = $coffee/12;
-#$coffee = round($coffee, 2);
-
-$standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
-$extra_payment = getPayoffProjection(30000, 5.5, 200, 50);
-
-$interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
-$time_savings = $standard_payment['date']->diff($extra_payment['date']);
 
 #echo 'Interest Savings: $' . $interest_savings . PHP_EOL;
 #echo 'Time Savings: ' . $time_savings->format('%y years and %m months') . PHP_EOL;

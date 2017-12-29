@@ -98,7 +98,7 @@
           </div>
           <hr class="invisible compact">
           <div class="coffee-calculator text-center">
-            <div>Pay off <span class="coffee-early coffee-var"><?php echo $time_savings->format('%y years and %m months'); ?></span> months early</div>
+            <div>Pay off <span class="coffee-early coffee-var"><?php echo $time_savings->format('%y years and %m months'); ?></span> early</div>
             <div>Save $<span class="coffee-interest coffee-var"><?php echo $interest_savings ?></span> on interest</div>
           </div>
         </div>
@@ -125,6 +125,8 @@
       results = (coffees*coffeecost)*52;
       $('.coffee-qty').html(coffees);
       $('.coffee-result').html(results);
+      $('.coffee-early').html('<?php echo json_encode($interest_savings); ?>');
+      $('.coffee-interest').html('<?php echo json_encode($time_savings, JSON_FORCE_OBJECT) ?>');
 
       var formData = {
         'contribution' : $('input[name=contribution]').val(),
@@ -137,7 +139,7 @@
         dataType: 'json',
         encode: true,
       }).done(function(data){
-        console.log(formData);
+        console.log(<?php echo json_encode($result) ?>);
       });
       
       e.preventDefault();
