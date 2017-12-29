@@ -35,6 +35,12 @@
         </div>
       </div>
     </div>
+    <div class="coffee-disclaimer text-center">
+      <hr class="invisible compact">
+      <small>
+        This calculator is just a guideline. Always consult with a financial advisor and the college to determine actual savings. <br>Assumes 8% growth rate on a typical savings investment.
+      </small>
+    </div>
   </div>
 </div>
 
@@ -72,7 +78,8 @@
 
       var loanAmount = 30000;
       var interestRate = 5.5;
-      var termInYears = 0;
+      var termInYears = 30;
+      var monthlyPayment = 200;
 
       //var coffees = mySlider.slider('getValue');
       var coffeecostperyear = (coffees*coffeecost)*52;
@@ -103,9 +110,11 @@
       ];
 
       var modifiedLoan = MortgageCalculator.calculateMortgage(loanOptions);
+
       var sumOfExtraPayments = extraPaymentMonths * extraAmount;
       var interestSavings = Math.floor(unmodifiedLoan.totalLoanCost - modifiedLoan.totalLoanCost);
       var totalSavings = sumOfExtraPayments + interestSavings;
+
       var monthsSaved = modifiedLoan.loanTermMonths - modifiedLoan.numberOfPayments;
       var yearsSaved = Math.round((monthsSaved) / 12);
       var months = monthsSaved;
