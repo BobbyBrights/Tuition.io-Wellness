@@ -1,6 +1,6 @@
 <?php
 
-$cups = 7;
+$cups = 5;
 if($_POST[‘contribution’]) {
     $cups = int_val($_POST[‘contribution’]);
 }
