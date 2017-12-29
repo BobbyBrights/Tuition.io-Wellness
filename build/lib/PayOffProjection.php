@@ -1,30 +1,16 @@
 <?php
 
 if ($_POST) {
-
-    $cups = $_POST['contribution'];
-    $result = ($cups*3.5*52)/12;
-
-    $standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
-    $extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
-
-    $interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
-    $time_savings = $standard_payment['date']->diff($extra_payment['date']);
-
-} else {
-
-    $cups = 7;
-    $result = ($cups*3.5*52)/12;
-
-    $standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
-    $extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
-    $interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
-    $time_savings = $standard_payment['date']->diff($extra_payment['date']);
-
+    $cups = int_val($_POST['contribution']);
 }
 
-#echo 'Interest Savings: $' . $interest_savings . PHP_EOL;
-#echo 'Time Savings: ' . $time_savings->format('%y years and %m months') . PHP_EOL;
+$cups = 5;
+$result = ($cups*3.5*52)/12;
+$standard_payment = getPayoffProjection(30000, 5.5, 200, 0);
+$extra_payment = getPayoffProjection(30000, 5.5, 200, $result);
+$interest_savings = round($standard_payment['total_interest'] - $extra_payment['total_interest'], 2);
+$time_savings = $standard_payment['date']->diff($extra_payment['date']);
+$return = array('interest_savings' => $interest_savings, 'time_savings' => $time_savings->format('%y years and %m months'));
 
 /**
  * PayoffProjection
