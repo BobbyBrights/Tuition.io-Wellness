@@ -74,8 +74,6 @@
   </div>
 </div>
 
-<?php include ('lib/PayOffProjection.php'); ?>
-
 <div class="fs-row">
   <div class="fs-cell fs-all-full">
     <div class="coffee page-content">
@@ -98,11 +96,17 @@
           </div>
           <hr class="invisible compact">
           <div class="coffee-calculator text-center">
-            <div>Pay off <span class="coffee-early coffee-var"><?php echo $time_savings->format('%y years and %m months'); ?></span> early</div>
-            <div>Save $<span class="coffee-interest coffee-var"><?php echo $interest_savings ?></span> on interest</div>
+            <div>Pay off <span class="coffee-early coffee-var"></span> early</div>
+            <div>Save $<span class="coffee-interest coffee-var"></span> on interest</div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="coffee-disclaimer text-center">
+      <hr class="invisible compact">
+      <small>
+        This calculator is just a guideline. Always consult with a financial advisor and the college to determine actual savings. <br>Assumes 8% growth rate on a typical savings investment.
+      </small>
     </div>
   </div>
 </div>
@@ -118,15 +122,21 @@
       }
     });
 
-    $("#contribution").slider().on('slideStop',function(e){
+    moveSlider();
+
+    $("#contribution").slider().on('slideStop',function(){
+      moveSlider();
+    });
+
+    function moveSlider(e){
 
       coffees = mySlider.slider('getValue');
       coffeecost = parseInt($('.coffee-cost').html());
       results = (coffees*coffeecost)*52;
       $('.coffee-qty').html(coffees);
       $('.coffee-result').html(results);
-      $('.coffee-early').html(<?php echo json_encode($return['time_savings']); ?>);
-      $('.coffee-interest').html(<?php echo json_encode($return['interest_savings']); ?>);
+      //$('.coffee-early').html('hello');
+      //$('.coffee-interest').html('hello');
 
       var formData = {
         'contribution' : $('input[name=contribution]').val(),
@@ -139,13 +149,16 @@
         dataType: 'json',
         encode: true,
       }).done(function(data){
-        console.log(<?php echo json_encode($return['interest_savings']); ?>);
-        console.log(<?php echo json_encode($return['time_savings']); ?>);
+        console.log(data);
+        
+        var interestSavings = data.interest_savings;
+        var money = interestSavings.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+
+        $(".coffee-early").html(data.time_savings);
+        $(".coffee-interest").html(money);
       });
       
-      e.preventDefault();
-
-    });
+    };
 
   });
 </script>

@@ -1,8 +1,9 @@
 <?php
 
-$cups = 7;
-if($_POST[‘contribution’]) {
-    $cups = int_val($_POST[‘contribution’]);
+$cups = 5;
+
+if($_POST['contribution']) {
+    $cups = intval($_POST['contribution']);
 }
 
 $result = ($cups*3.5*52)/12;
