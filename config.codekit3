@@ -11796,6 +11796,13 @@
 		"oAP": "\/build\/coffee.html",
 		"oF": 0
 		},
+	"\/source\/coffee.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/coffee.php",
+		"oF": 0
+		},
 	"\/source\/collegecostcalc.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -12269,6 +12276,20 @@
 		"sI": 0,
 		"sM": 0,
 		"sU": 0
+		},
+	"\/source\/lib\/PayOffProjection.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/lib\/PayOffProjection.php",
+		"oF": 0
+		},
+	"\/source\/lib\/process.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/lib\/process.php",
+		"oF": 0
 		},
 	"\/source\/myloans.kit": {
 		"cB": 0,
